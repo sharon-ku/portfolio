@@ -1,0 +1,45 @@
+/* Poppins */
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap';
+
+* {margin: 0px; padding: 0px; box-sizing: border-box;}
+
+body {
+  background: saddlebrown;
+}
+
+nav.top-navigation {
+  font-family: 'Poppins', Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  background: orange;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+
+nav.top-navigation a {
+  background: pink;
+  padding: 10px;
+}
+
+nav.top-navigation a:link {
+  text-decoration: none;
+
+}
+
+section.my-description {
+  font-family: 'Poppins', Arial, sans-serif;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin-top: 500px;
+  /* background: green; */
+}
+
+.my-description p {
+  max-width: 300px;
+  /* background: purple; */
+
+}
