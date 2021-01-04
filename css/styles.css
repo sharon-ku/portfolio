@@ -4,7 +4,14 @@
 * {margin: 0px; padding: 0px; box-sizing: border-box;}
 
 body {
-  background: saddlebrown;
+  /* midnight blue */
+  background: #213545;
+}
+
+p {
+  font-family: 'Poppins', Arial, sans-serif;
+  /* light blue */
+  color: #b1eaf4;
 }
 
 nav.top-navigation {
@@ -12,15 +19,15 @@ nav.top-navigation {
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
-  background: orange;
   justify-content: flex-end;
   align-items: center;
   margin-right: 50px;
   margin-top: 50px;
+  /* background: orange; */
 }
 
 nav.top-navigation a {
-  background: pink;
+  background: darkblue;
   padding: 10px;
 }
 
@@ -29,12 +36,20 @@ nav.top-navigation a:link {
 
 }
 
+nav.top-navigation a p {
+  /* light blue */
+  color: #b1eaf4;
+}
+
 section.my-description {
   font-family: 'Poppins', Arial, sans-serif;
+  /* light blue */
+  color: #b1eaf4;
+  text-align: center;
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  margin-top: 500px;
+  margin-top: 350px;
   /* background: green; */
 }
 
