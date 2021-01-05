@@ -6,9 +6,15 @@
 body {
   /* midnight blue */
   background: #213545;
+  /* hide scrollbars */
+  overflow: hidden;
 }
 
 p {
+  text-align: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
   font-family: 'Poppins', Arial, sans-serif;
   /* light blue */
   color: #b1eaf4;
