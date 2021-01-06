@@ -36,6 +36,24 @@ let mouse = {
 // plant
 let plant;
 
+// array that stores my pretty butterflies
+let butterflies = [];
+// number of butterflies
+let numButterflies = 4;
+// tracks whether it is time to release butterflies or not
+let releaseButterflies = false;
+
+// keeping track of frames to know when to release new butterfly
+let butterflyFrames = {
+  elapsed: 90,
+  neededToReleaseNewButterfly: 100,
+};
+
+// array that stores images of butterfly
+let butterflyImages = [];
+// number of unicorn images
+let numButterflyImages = 2;
+
 // globe that houses unicorn
 let globe;
 
@@ -84,6 +102,12 @@ let seatInitialAngle = 0;
 //
 // Preloads assets (images, sounds, fonts)
 function preload() {
+  // store images of butterfly inside butterflyImages array
+  for (let i = 0; i < numButterflyImages; i++) {
+    let butterflyImage = loadImage(`assets/images/butterfly${i}.png`);
+    butterflyImages.push(butterflyImage);
+  }
+
   // image of globe
   globeImage = loadImage(`assets/images/globe.png`);
   // image of globe base
@@ -162,6 +186,7 @@ function setup() {
   }
 }
 
+// Center canvas to window
 function centerCanvas() {
   canvasX = (windowWidth - width) / 2;
   canvasY = (windowHeight - height) / 2;
@@ -189,14 +214,52 @@ function draw() {
   floorWidth = width;
   floor.display(floorWidth);
 
+  // Draw all sprites: whale animation
+  drawSprites();
+
+  // If mouse hovering over plant, release butterflies
+  if (plant.overlapsWith(mouse)) {
+    releaseButterflies = true;
+  }
+
+  if (releaseButterflies) {
+    // Increase frames elapsed
+    butterflyFrames.elapsed++;
+    // Once frames elapsed is equal to frames needed to switch between the images, update current wheels image
+    if (butterflyFrames.elapsed === butterflyFrames.neededToReleaseNewButterfly) {
+      // Create new butterfly
+      let butterfly = new Butterfly(butterflyImages, plant);
+      butterflies.push(butterfly);
+      // Reset frames elapsed to zero
+      butterflyFrames.elapsed = 0;
+    }
+
+
+
+    // // Create new butterflies and store them in butterflies array
+    // for (let i = 0; i < numButterflies; i++) {
+    //   let butterfly = new Butterfly(butterflyImages, plant);
+    //   butterflies.push(butterfly);
+    //
+    // }
+    releaseButterflies = false;
+  }
+
+  // Display butterflies and let them fly
+  for (let i = 0; i < butterflies.length; i++) {
+    let butterfly = butterflies[i];
+    // let butterfly fly
+    butterfly.fly();
+    // display butterfly
+    butterfly.display();
+  }
+
+
   // Create a globe that contains all these behaviours:
   // Displays globe and unicorn
   // Release snowflakes inside globe
   // Unicorn flaps wings when mouse hovers on globe
   createGlobe();
-
-  // Draw all sprites: whale animation
-  drawSprites();
 
   // Create a ferris wheel that contains all these behaviours:
   // Display rotating ferris wheel and seats that revolve around it
