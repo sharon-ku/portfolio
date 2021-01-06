@@ -1,6 +1,6 @@
 class FerrisWheelSeat {
   constructor(seatImage, initialAngle) {
-    // store image of seat
+    // stores image of seat
     this.image = seatImage;
     // size information
     this.width = 68;
@@ -8,10 +8,11 @@ class FerrisWheelSeat {
     // position information
     this.x = 0;
     this.y = 0;
-
+    // angle information
     this.theta = {
       current: initialAngle,
     };
+    // rotation speed
     this.rotationSpeed = PI / 180;
   }
 

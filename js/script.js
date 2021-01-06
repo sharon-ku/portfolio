@@ -11,12 +11,12 @@ let canvas;
 // paragraph of text that contains description about me
 let paragraph;
 
-// background color: midnight blue
+// background color: navy blue
 let bg = {
-  r: 59,
-  g: 143,
-  b: 161,
-  // hex code: #3b8fa1
+  r: 55,
+  g: 125,
+  b: 140,
+  // hex code: #377d8c
 };
 
 // ferris wheel
@@ -24,7 +24,8 @@ let ferrisWheel;
 
 // contains ferris wheel images
 let ferrisWheelImage = {
-  wheel: undefined,
+  wheels: [],
+  numWheelImages: 3,
   stand: undefined,
   seat: undefined,
 };
@@ -40,8 +41,12 @@ let seatInitialAngle = 0;
 //
 // Preloads assets (images, sounds, fonts)
 function preload() {
-  // image of wheel
-  ferrisWheelImage.wheel = loadImage(`assets/images/ferrisWheel.png`);
+  // store images of wheel inside ferrisWheelImage.wheels array
+  for (let i = 0; i < ferrisWheelImage.numWheelImages; i++) {
+    let loadedImage = loadImage(`assets/images/ferrisWheel${i}.png`);
+    ferrisWheelImage.wheels.push(loadedImage);
+  }
+
   // image of stand that holds wheel
   ferrisWheelImage.stand = loadImage(`assets/images/ferrisWheelStand.png`);
   // image of ferris wheel seat
@@ -53,6 +58,12 @@ function preload() {
 //
 // Description of setup() goes here.
 function setup() {
+  // Remove strokes on all shapes
+  noStroke();
+
+  // Hide cursor
+  noCursor();
+
   // Create a canvas that takes up full screen
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
@@ -62,7 +73,7 @@ function setup() {
   paragraph.position(width/2, height/2);
 
   // Create a new ferris wheel
-  ferrisWheel = new FerrisWheel(ferrisWheelImage.wheel, ferrisWheelImage.stand);
+  ferrisWheel = new FerrisWheel(ferrisWheelImage.wheels, ferrisWheelImage.stand);
 
   // Create 6 new ferris wheel seats and push to ferrisWheelSeats array
   for (let i = 0; i < numSeats; i++) {
@@ -98,5 +109,14 @@ function draw() {
   // Display and rotate ferris wheel
   ferrisWheel.displayAndRotate();
 
+  if (mouseIsPressed) {
+    ferrisWheel.hover();
+  }
+
+  // Display circle on mouse's position
+  push();
+  fill(255);
+  ellipse(mouseX, mouseY, 20);
+  pop();
 
 }

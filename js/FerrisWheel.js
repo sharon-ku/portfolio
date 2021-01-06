@@ -1,13 +1,19 @@
 class FerrisWheel {
-  constructor(ferrisWheelImage, ferrisWheelStandImage) {
+  constructor(ferrisWheelImages, ferrisWheelStandImage) {
     // position information
     this.x = width - 200;
     this.y = height * 3/5;
 
     // information for wheel
     this.wheel = {
-      // image of wheel
-      image: ferrisWheelImage,
+      // stores images of wheel
+      images: ferrisWheelImages,
+      // stores current image number (index of wheel.images array)
+      currentImage: 0,
+      // frames elapsed between images
+      framesElapsed: 0,
+      // frames need to switch images
+      framesBetweenImages: 10,
       // image width and height
       width: 200,
       height: 200,
@@ -37,7 +43,7 @@ class FerrisWheel {
 
   }
 
-  // Display the stand that holds ferris wheel up
+  // Display the image of the stand that holds ferris wheel up
   displayStand() {
     push();
     translate(this.x, this.y);
@@ -46,23 +52,11 @@ class FerrisWheel {
     pop();
   }
 
-  // Display the wheel
-
-
-  // Display wheel and stand images and rotate wheel
-  displayAndRotate() {
-    // display the stand that supports the wheel
-    this.displayStand();
-
-    push();
-    // rotate about the wheel's center
+  // Rotate the wheel about its center point
+  rotateWheel() {
     translate(this.x, this.y);
     rotate(this.wheel.theta.current);
     this.wheel.theta.current += this.wheel.rotationSpeed;
-    // display the wheel's image
-    imageMode(CENTER);
-    image(this.wheel.image, 0, 0);
-    pop();
 
     // When ferris wheel makes a full rotation (2pi), start a new rotation by setting theta back 2pi
     if (this.wheel.theta.current > this.wheel.theta.total) {
@@ -70,7 +64,44 @@ class FerrisWheel {
     }
   }
 
+  // Display the ferris wheel image
+  displayWheel() {
+    imageMode(CENTER);
+    image(this.wheel.images[this.wheel.currentImage], 0, 0);
+  }
 
+  // Display wheel and stand images and rotate wheel
+  displayAndRotate() {
+    // display the image of stand that supports the wheel
+    this.displayStand();
+
+    push();
+    // rotate wheel about its center
+    this.rotateWheel();
+
+    // display the wheel's image
+    this.displayWheel();
+    pop();
+  }
+
+
+  // When mouse is hovering over ferris wheel, cue lights animation by switching between wheels images
+  hover() {
+    // Increase frames elapsed
+    this.wheel.framesElapsed++;
+    // Once frames elapsed is equal to frames needed to switch between the images, update current wheels image
+    if (this.wheel.framesElapsed === this.wheel.framesBetweenImages) {
+      if (this.wheel.currentImage === 0) {
+        this.wheel.currentImage = 1;
+      } else if (this.wheel.currentImage === 1) {
+        this.wheel.currentImage = 2;
+      } else if (this.wheel.currentImage === 2) {
+        this.wheel.currentImage = 0;
+      }
+      // Reset frames elapsed to zero
+      this.wheel.framesElapsed = 0;
+    }
+  }
 
 
 }
