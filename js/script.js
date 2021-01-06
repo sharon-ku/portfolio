@@ -7,16 +7,18 @@ Here is a description of this template p5 project.
 
 // canvas that contains animated content
 let canvas;
+let canvasX;
+let canvasY;
 
 // paragraph of text that contains description about me
 let paragraph;
 
 // background color: navy blue
 let bg = {
-  r: 55,
-  g: 125,
+  r: 63,
+  g: 115,
   b: 140,
-  // hex code: #377d8c
+  // hex code: #3f738c
 };
 
 // mouse information that follows cursor
@@ -42,6 +44,9 @@ let numUnicornImages = 2;
 let snowflakes = [];
 // number of snowflakes inside globe
 let numSnowflakes = 20;
+
+// Wally the whale
+let whale;
 
 // ferris wheel
 let ferrisWheel;
@@ -103,11 +108,13 @@ function setup() {
   noStroke();
 
   // Hide cursor
-  noCursor();
+  // noCursor();
 
   // Create a canvas that takes up full screen
-  canvas = createCanvas(windowWidth, windowHeight);
-  canvas.position(0,0);
+  canvas = createCanvas(900, windowHeight);
+
+  // Center canvas on window
+  centerCanvas();
   // Place canvas behind DOM elements
   canvas.style(`z-index`, `-1`);
 
@@ -124,6 +131,9 @@ function setup() {
     snowflakes.push(snowflake);
   }
 
+  // Create a new whale
+  whale = new Whale();
+
   // Create a new ferris wheel
   ferrisWheel = new FerrisWheel(ferrisWheelImage.wheels, ferrisWheelImage.stand);
 
@@ -138,11 +148,20 @@ function setup() {
   }
 }
 
+function centerCanvas() {
+  canvasX = (windowWidth - width) / 2;
+  canvasY = (windowHeight - height) / 2;
+  canvas.position(canvasX, canvasY);
+}
+
 // windowResized()
 //
 // Resize canvas every time window size changes
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  // center canvas in middle of window
+  centerCanvas();
+  // resize canvas to window width and height
+  resizeCanvas(900, windowHeight);
 }
 
 // draw()
@@ -152,10 +171,41 @@ function draw() {
   // Set bg color
   background(bg.r, bg.g, bg.b);
 
+  // Create a globe that contains all these behaviours:
+  // Displays globe and unicorn
+  // Release snowflakes inside globe
+  // Unicorn flaps wings when mouse hovers on globe
+  createGlobe();
+
+  // Draw all sprites: whale animation
+  drawSprites();
+
+  // Create a ferris wheel that contains all these behaviours:
+  // Display rotating ferris wheel and seats that revolve around it
+  // Lights animation when mouse hovers over ferris wheel
+  createFerrisWheel();
+
+  // Display circle on mouse's position
+  mouse.x = mouseX;
+  mouse.y = mouseY;
+
+  // push();
+  // fill(255);
+  // ellipse(mouse.x, mouse.y, mouse.size);
+  // pop();
+
+
+
+}
+
+// Display globe with unicorn and falling snow inside it
+// And unicorn flaps wings when mouse hovers over globe
+function createGlobe() {
   // Display snowflakes, let them fall, and wrap to top when they reach the bottom of the globe
   // These snowflakes are displayed behind the globe
   releaseSnowflakes();
 
+  // If mouse hovers over globe, make unicorn flap wings
   if (globe.overlapsWith(mouse)) {
     globe.unicornFlapsWings();
   }
@@ -168,23 +218,6 @@ function draw() {
   // Display snowflakes, let them fall, and wrap to top when they reach the bottom of the globe
   // These snowflakes are released in front of the globe
   releaseSnowflakes();
-
-  // Create a ferris wheel that carries all these behaviours:
-  // Display rotating ferris wheel and seats that revolve around it
-  // And create a lights animation when mouse hovers over ferris wheel
-  createFerrisWheel();
-
-  // Display circle on mouse's position
-  mouse.x = mouseX;
-  mouse.y = mouseY;
-
-  push();
-  fill(255);
-  ellipse(mouse.x, mouse.y, mouse.size);
-  pop();
-
-
-
 }
 
 // Display snowflakes, let them fall, and wrap to top when they reach the bottom of the globe
@@ -204,7 +237,7 @@ function releaseSnowflakes() {
   }
 }
 
-// Display rotating ferris wheel and seats that revolve around it
+// Display rotating ferris wheel with seats that revolve around it
 // And create a lights animation when mouse hovers over ferris wheel
 function createFerrisWheel() {
   // Display ferris wheel seats

@@ -4,7 +4,7 @@ class Globe {
     this.globeImage = globeImage;
     // position information
     this.x = 260;
-    this.y = height - 300;
+    this.y = height - 255;
     // radius of globe
     this.radius = 134 / 2;
 

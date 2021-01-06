@@ -4,11 +4,12 @@
 * {margin: 0px; padding: 0px; box-sizing: border-box;}
 
 body {
-  /* midnight blue */
-  background: #213545;
+  /* background blue */
+  background: #3f738c;
+  /* background: green; */
   /* hide scrollbars */
   /* overflow: hidden; */
-  cursor: none;
+  cursor: url('../assets/images/cursor2.png'), auto;
 }
 
 p {
@@ -34,7 +35,8 @@ nav.top-navigation {
 }
 
 nav.top-navigation a {
-  background: darkblue;
+  /* midnight blue */
+  background: rgba(33, 53, 70, 0.5);
   padding: 10px;
 }
 
@@ -48,6 +50,25 @@ nav.top-navigation a p {
   color: #b1eaf4;
 }
 
+section.my-name {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.my-name h1 {
+  font-family: 'Poppins', Arial, sans-serif;
+  /* light blue */
+  color: #b1eaf4;
+  text-align: center;
+  font-size: 6em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
 section.my-description {
   font-family: 'Poppins', Arial, sans-serif;
   /* light blue */
@@ -56,23 +77,17 @@ section.my-description {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  margin-top: 10px;
 
-  /* margin-top: 350px; */
   /* background: green; */
 }
 
 .my-description p {
-  height: 50%;
   font-size: 1.2em;
-}
-
-.my-description p {
+  letter-spacing: 0.5px;
   max-width: 300px;
-  /* background: purple; */
-
 }
+
 
 
 /* ------------------------------------------ */
