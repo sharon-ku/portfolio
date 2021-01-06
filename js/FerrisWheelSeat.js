@@ -24,11 +24,11 @@ class FerrisWheelSeat {
   }
 
   // Display the seat's image
-  display(wheelX, wheelY, wheelRadius) {
+  display(ferrisWheel) {
     push();
-    this.rotate(wheelRadius);
+    this.rotate(ferrisWheel.wheel.radius);
 
-    translate(wheelX, wheelY);
+    translate(ferrisWheel.x, ferrisWheel.y);
     imageMode(CENTER);
     image(this.image, this.x, this.y);
     pop();
