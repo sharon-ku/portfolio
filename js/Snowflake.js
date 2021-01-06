@@ -16,7 +16,7 @@ class Snowflake {
     };
   }
 
-  // Returns true if object is inside the globe
+  // Returns true if object overlaps with globe
   isInsideGlobe(globe) {
     // Calculating distance between object's and globe's center points
     let distBtwObjectAndGlobe = dist(this.x, this.y, globe.x, globe.y);
@@ -29,13 +29,14 @@ class Snowflake {
     }
   }
 
+  // Wrap snowflake back to top when it reaches the bottom of the globe
   wrapBackToTop(globe) {
     if (this.y > globe.y + globe.radius) {
       this.y -= 2 * globe.radius;
     }
   }
 
-  // Display a snowflake
+  // Display a snowflake as a circle
   display() {
     push();
     fill(this.fill.r, this.fill.g, this.fill.b);

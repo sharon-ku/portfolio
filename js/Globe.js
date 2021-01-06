@@ -55,6 +55,19 @@ class Globe {
     }
   }
 
+  // Returns true if object overlaps with globe
+  overlapsWith(object) {
+    // Calculating distance between object's and globe's center points
+    let distBtwObjectAndGlobe = dist(object.x, object.y, this.x, this.y);
+
+    // If the object is inside the globe, return true
+    if (distBtwObjectAndGlobe < this.radius) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   // Display globe image
   displayGlobe() {
     push();

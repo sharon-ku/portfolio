@@ -19,6 +19,13 @@ let bg = {
   // hex code: #377d8c
 };
 
+// mouse information that follows cursor
+let mouse = {
+  x: 0,
+  y: 0,
+  size: 20,
+};
+
 // globe that houses unicorn
 let globe;
 
@@ -149,10 +156,13 @@ function draw() {
   // These snowflakes are displayed behind the globe
   releaseSnowflakes();
 
+  if (globe.overlapsWith(mouse)) {
+    globe.unicornFlapsWings();
+  }
+
   // Display globe images: its base, the actual globe, unicorn inside
   globe.displayBase();
   globe.displayGlobe();
-  globe.unicornFlapsWings();
   globe.displayUnicorn();
 
   // Display snowflakes, let them fall, and wrap to top when they reach the bottom of the globe
@@ -165,9 +175,12 @@ function draw() {
   createFerrisWheel();
 
   // Display circle on mouse's position
+  mouse.x = mouseX;
+  mouse.y = mouseY;
+
   push();
   fill(255);
-  ellipse(mouseX, mouseY, 20);
+  ellipse(mouse.x, mouse.y, mouse.size);
   pop();
 
 
