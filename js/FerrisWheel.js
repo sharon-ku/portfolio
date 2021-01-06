@@ -84,9 +84,21 @@ class FerrisWheel {
     pop();
   }
 
+  // Return true if mouse is overlapping with wheel
+  overlapsWithMouse() {
+    if (mouseX > this.x - this.wheel.radius &&
+    mouseX < this.x + this.wheel.radius &&
+    mouseY > this.y - this.wheel.radius &&
+    mouseY < this.y + this.wheel.radius) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 
-  // When mouse is hovering over ferris wheel, cue lights animation by switching between wheels images
-  hover() {
+  // Switch between wheels images to create a lights animation
+  animateWheelImages() {
     // Increase frames elapsed
     this.wheel.framesElapsed++;
     // Once frames elapsed is equal to frames needed to switch between the images, update current wheels image

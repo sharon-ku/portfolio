@@ -109,8 +109,9 @@ function draw() {
   // Display and rotate ferris wheel
   ferrisWheel.displayAndRotate();
 
-  if (mouseIsPressed) {
-    ferrisWheel.hover();
+  // If mouse overlaps with ferris wheel, cue lights animation by switching between wheel images
+  if (ferrisWheel.overlapsWithMouse()) {
+    ferrisWheel.animateWheelImages();
   }
 
   // Display circle on mouse's position

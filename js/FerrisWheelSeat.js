@@ -21,10 +21,9 @@ class FerrisWheelSeat {
     this.x = wheelRadius * cos(this.theta.current);
     this.y = wheelRadius * sin(this.theta.current);
     this.theta.current += this.rotationSpeed;
-
   }
 
-  // Display the seat
+  // Display the seat's image
   display(wheelX, wheelY, wheelRadius) {
     push();
     this.rotate(wheelRadius);
@@ -35,9 +34,6 @@ class FerrisWheelSeat {
     pop();
   }
 
-  swing() {
-
-  }
 
 
 }
