@@ -19,21 +19,33 @@ let bg = {
   // hex code: #3b8fa1
 };
 
-// contains ferris wheel images
-let ferrisWheelImage = undefined;
-let ferrisWheelStandImage = undefined;
-
 // ferris wheel
 let ferrisWheel;
+
+// contains ferris wheel images
+let ferrisWheelImage = {
+  wheel: undefined,
+  stand: undefined,
+  seat: undefined,
+};
+
+// array that contains ferris wheel seats
+let ferrisWheelSeats = [];
+// number of ferris wheel seats
+let numSeats = 6;
+// angle used to position seat relative to wheel's center
+let seatInitialAngle = 0;
 
 // preload()
 //
 // Preloads assets (images, sounds, fonts)
 function preload() {
   // image of wheel
-  ferrisWheelImage = loadImage(`assets/images/ferrisWheel.png`);
+  ferrisWheelImage.wheel = loadImage(`assets/images/ferrisWheel.png`);
   // image of stand that holds wheel
-  ferrisWheelStandImage = loadImage(`assets/images/ferrisWheelStand.png`);
+  ferrisWheelImage.stand = loadImage(`assets/images/ferrisWheelStand.png`);
+  // image of ferris wheel seat
+  ferrisWheelImage.seat = loadImage(`assets/images/ferrisWheelSeat.png`);
 }
 
 
@@ -50,7 +62,24 @@ function setup() {
   paragraph.position(width/2, height/2);
 
   // Create a new ferris wheel
-  ferrisWheel = new FerrisWheel(ferrisWheelImage, ferrisWheelStandImage);
+  ferrisWheel = new FerrisWheel(ferrisWheelImage.wheel, ferrisWheelImage.stand);
+
+  // Create 6 new ferris wheel seats and push to ferrisWheelSeats array
+  for (let i = 0; i < numSeats; i++) {
+    // The seat's initial angles are equally spaced across the perimeter of the ferris wheel:
+    seatInitialAngle = i * (TWO_PI / numSeats) + PI/2;
+    // Create a new seat positioned at the initial angle
+    let ferrisWheelSeat = new FerrisWheelSeat(ferrisWheelImage.seat, seatInitialAngle);
+    // Push to new seat to the ferrisWheelSeats array
+    ferrisWheelSeats.push(ferrisWheelSeat);
+  }
+}
+
+// windowResized()
+//
+// Resize canvas every time window size changes
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 // draw()
@@ -59,6 +88,12 @@ function setup() {
 function draw() {
   // Set bg color
   background(bg.r, bg.g, bg.b);
+
+  // Display ferris wheel seat
+  for (let i = 0; i < ferrisWheelSeats.length; i++) {
+    let ferrisWheelSeat = ferrisWheelSeats[i];
+    ferrisWheelSeat.display(ferrisWheel.x, ferrisWheel.y, ferrisWheel.wheel.radius);
+  }
 
   // Display and rotate ferris wheel
   ferrisWheel.displayAndRotate();

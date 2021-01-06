@@ -1,7 +1,5 @@
 class FerrisWheel {
   constructor(ferrisWheelImage, ferrisWheelStandImage) {
-    // images
-    this.ferrisWheelStandImage = ferrisWheelStandImage;
     // position information
     this.x = width - 200;
     this.y = height * 3/5;
@@ -14,7 +12,7 @@ class FerrisWheel {
       width: 200,
       height: 200,
       // radius of wheel
-      radius: 200,
+      radius: 100,
       // wheel angle (for rotation)
       theta: {
         current: 0,
@@ -35,6 +33,8 @@ class FerrisWheel {
       xOffsetFromWheel: 2,
       yOffsetFromWheel: 80,
     };
+
+
   }
 
   // Display the stand that holds ferris wheel up
@@ -45,6 +45,9 @@ class FerrisWheel {
     image(this.stand.image, this.stand.xOffsetFromWheel, this.stand.yOffsetFromWheel);
     pop();
   }
+
+  // Display the wheel
+
 
   // Display wheel and stand images and rotate wheel
   displayAndRotate() {
