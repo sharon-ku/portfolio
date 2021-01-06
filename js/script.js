@@ -26,6 +26,11 @@ let globe;
 let globeImage = undefined;
 let globeBaseImage = undefined;
 
+// array that stores images of unicorn
+let unicornImages = [];
+// number of unicorn images
+let numUnicornImages = 2;
+
 // array that stores snowflakes
 let snowflakes = [];
 // number of snowflakes inside globe
@@ -36,9 +41,13 @@ let ferrisWheel;
 
 // contains ferris wheel images
 let ferrisWheelImage = {
+  // array that stores wheel images
   wheels: [],
+  // number of wheel images
   numWheelImages: 3,
+  // image of stand that holds wheel up
   stand: undefined,
+  // image of ferris wheel seat
   seat: undefined,
 };
 
@@ -59,6 +68,12 @@ function preload() {
   globeImage = loadImage(`assets/images/globe.png`);
   // image of globe base
   globeBaseImage = loadImage(`assets/images/globeBase.png`);
+
+  // store images of unicorn inside unicornImages array
+  for (let i = 0; i < numUnicornImages; i++) {
+    let unicornImage = loadImage(`assets/images/unicorn${i}.png`);
+    unicornImages.push(unicornImage);
+  }
 
   // store images of wheel inside ferrisWheelImage.wheels array
   for (let i = 0; i < ferrisWheelImage.numWheelImages; i++) {
@@ -94,7 +109,7 @@ function setup() {
   // paragraph.position(width/2, height/2);
 
   // Create a new globe
-  globe = new Globe(globeImage, globeBaseImage);
+  globe = new Globe(globeImage, globeBaseImage, unicornImages);
 
   // Create new snowflakes and store them in snowflakes array
   for (let i = 0; i < numSnowflakes; i++) {
@@ -131,11 +146,18 @@ function draw() {
   background(bg.r, bg.g, bg.b);
 
   // Display snowflakes, let them fall, and wrap to top when they reach the bottom of the globe
+  // These snowflakes are displayed behind the globe
   releaseSnowflakes();
 
-  // Display globe
+  // Display globe images: its base, the actual globe, unicorn inside
   globe.displayBase();
   globe.displayGlobe();
+  globe.unicornFlapsWings();
+  globe.displayUnicorn();
+
+  // Display snowflakes, let them fall, and wrap to top when they reach the bottom of the globe
+  // These snowflakes are released in front of the globe
+  releaseSnowflakes();
 
   // Create a ferris wheel that carries all these behaviours:
   // Display rotating ferris wheel and seats that revolve around it

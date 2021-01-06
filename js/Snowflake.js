@@ -16,13 +16,13 @@ class Snowflake {
     };
   }
 
-  // Returns true if snowflake is inside the globe
+  // Returns true if object is inside the globe
   isInsideGlobe(globe) {
-    // Calculating distance between snowflake's center point and globe's center point
-    let distBtwSnowflakeAndGlobe = dist(this.x, this.y, globe.x, globe.y);
+    // Calculating distance between object's and globe's center points
+    let distBtwObjectAndGlobe = dist(this.x, this.y, globe.x, globe.y);
 
-    // If the snowflake is inside the globe, return true
-    if (distBtwSnowflakeAndGlobe < globe.radius - this.size) {
+    // If the object is inside the globe, return true
+    if (distBtwObjectAndGlobe < globe.radius - this.size) {
       return true;
     } else {
       return false;

@@ -8,6 +8,7 @@ body {
   background: #213545;
   /* hide scrollbars */
   /* overflow: hidden; */
+  cursor: none;
 }
 
 p {
