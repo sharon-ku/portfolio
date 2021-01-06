@@ -21,12 +21,20 @@ let bg = {
   // hex code: #3f738c
 };
 
+// floor
+let floor;
+// floor width
+let floorWidth = 100;
+
 // mouse information that follows cursor
 let mouse = {
   x: 0,
   y: 0,
   size: 20,
 };
+
+// plant
+let plant;
 
 // globe that houses unicorn
 let globe;
@@ -111,7 +119,7 @@ function setup() {
   // noCursor();
 
   // Create a canvas that takes up full screen
-  canvas = createCanvas(900, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight);
 
   // Center canvas on window
   centerCanvas();
@@ -121,6 +129,12 @@ function setup() {
   // Create a paragraph containing description text
   // paragraph = createP(`I am a graphic designer and illustrator based in Montreal.`);
   // paragraph.position(width/2, height/2);
+
+  // Create a new floor
+  floor = new Floor();
+
+  // Create a new plant
+  plant = new Plant();
 
   // Create a new globe
   globe = new Globe(globeImage, globeBaseImage, unicornImages);
@@ -161,7 +175,7 @@ function windowResized() {
   // center canvas in middle of window
   centerCanvas();
   // resize canvas to window width and height
-  resizeCanvas(900, windowHeight);
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 // draw()
@@ -170,6 +184,10 @@ function windowResized() {
 function draw() {
   // Set bg color
   background(bg.r, bg.g, bg.b);
+
+  // Display floor
+  floorWidth = width;
+  floor.display(floorWidth);
 
   // Create a globe that contains all these behaviours:
   // Displays globe and unicorn

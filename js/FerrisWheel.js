@@ -1,7 +1,7 @@
 class FerrisWheel {
   constructor(ferrisWheelImages, ferrisWheelStandImage) {
     // position information
-    this.x = width - 200;
+    this.x = (width / 2) + 300;
     this.y = height - 320;
 
     // information for wheel

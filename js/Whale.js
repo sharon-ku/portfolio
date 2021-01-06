@@ -1,7 +1,7 @@
 class Whale {
   constructor() {
     // movement information
-    this.x = width - 330;
+    this.x = (width / 2) + 140;
     this.y = height - 160;
     // animation information
     this.sprite = createSprite(this.x, this.y);

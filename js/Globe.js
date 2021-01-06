@@ -3,8 +3,8 @@ class Globe {
     // contains globe image
     this.globeImage = globeImage;
     // position information
-    this.x = 260;
-    this.y = height - 255;
+    this.x = (width / 2) - 180;
+    this.y = height - 230;
     // radius of globe
     this.radius = 134 / 2;
 
