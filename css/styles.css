@@ -23,6 +23,14 @@ body {
   color:#fff;
 } */
 
+section.logo {
+  position: fixed;
+  top: 28px;
+  left: 80px;
+  z-index: 99;
+  width: 30px;
+}
+
 nav.top-navigation {
   font-family: 'Poppins', Arial, sans-serif;
   width: 100%;
@@ -36,7 +44,7 @@ nav.top-navigation {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 1em;
+  padding-right: 50px;
   position: fixed;
   top: 20px;
   z-index: 99;
