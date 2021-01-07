@@ -9,7 +9,7 @@ class Butterfly {
     // frames need to switch images
     this.framesBetweenImages = 15;
     // position information
-    this.x = random(plant.x - (plant.width / 4), plant.x + (plant.width / 2) + (plant.width / 3));
+    this.x = random(plant.x + (plant.width / 2) - (plant.width / 3), plant.x + (plant.width / 2) + (plant.width / 3));
     this.y = plant.y + 50;
     // velocity information
     this.vx = 0;

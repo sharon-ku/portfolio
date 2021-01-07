@@ -1,8 +1,18 @@
 /**************************************************
-Template p5 project
+Portfolio Index Page Interactive Elements
 Sharon Ku
 
-Here is a description of this template p5 project.
+Four interesting objects are found on the tabletop:
+1) A plant with moving leaves positioned on top of books
+2) A globe containing a unicorn and falling snowflakes
+3) A whale named Wally that changes colors
+4) A Ferris wheel that rotates
+
+When the user hovers over each of these objects, this is what happens:
+1) The plant releases a set of butterflies that fly upwards
+2) The unicorn inside the globe flaps its wings as a way of saying "hi"
+3) Wally the whale stays the same.
+4) The Ferris wheel lights up brilliantly.
 **************************************************/
 
 // canvas that contains animated content
@@ -214,46 +224,13 @@ function draw() {
   floorWidth = width;
   floor.display(floorWidth);
 
-  // Draw all sprites: whale animation
+  // Draw all sprites: whale animation, plant animation
   drawSprites();
 
-  // If mouse hovering over plant, release butterflies
-  if (plant.overlapsWith(mouse)) {
-    releaseButterflies = true;
-  }
-
-  if (releaseButterflies) {
-    // Increase frames elapsed
-    butterflyFrames.elapsed++;
-    // Once frames elapsed is equal to frames needed to switch between the images, update current wheels image
-    if (butterflyFrames.elapsed === butterflyFrames.neededToReleaseNewButterfly) {
-      // Create new butterfly
-      let butterfly = new Butterfly(butterflyImages, plant);
-      butterflies.push(butterfly);
-      // Reset frames elapsed to zero
-      butterflyFrames.elapsed = 0;
-    }
-
-
-
-    // // Create new butterflies and store them in butterflies array
-    // for (let i = 0; i < numButterflies; i++) {
-    //   let butterfly = new Butterfly(butterflyImages, plant);
-    //   butterflies.push(butterfly);
-    //
-    // }
-    releaseButterflies = false;
-  }
-
-  // Display butterflies and let them fly
-  for (let i = 0; i < butterflies.length; i++) {
-    let butterfly = butterflies[i];
-    // let butterfly fly
-    butterfly.fly();
-    // display butterfly
-    butterfly.display();
-  }
-
+  // Create butterflies that have the following behaviours:
+  // If mouse hovers over plant, release butterflies at a certain ineterval
+  // Butterflies flap wings
+  createButterflies();
 
   // Create a globe that contains all these behaviours:
   // Displays globe and unicorn
@@ -266,10 +243,11 @@ function draw() {
   // Lights animation when mouse hovers over ferris wheel
   createFerrisWheel();
 
-  // Display circle on mouse's position
+  // Set mouse's x and y position to cursor's position
   mouse.x = mouseX;
   mouse.y = mouseY;
 
+  // Display circle on mouse's position
   // push();
   // fill(255);
   // ellipse(mouse.x, mouse.y, mouse.size);
@@ -277,6 +255,48 @@ function draw() {
 
 
 
+}
+
+// Create butterflies that have the following behaviours:
+// If mouse hovers over plant, release butterflies at a certain ineterval
+// Butterflies flap wings
+function createButterflies() {
+    // If mouse hovering over plant, release butterflies
+    if (plant.overlapsWith(mouse)) {
+      releaseButterflies = true;
+    }
+
+    // If it's time to release butterflies, create butterflies at an interval of time
+    if (releaseButterflies) {
+      // Increase frames elapsed
+      butterflyFrames.elapsed++;
+      // Once frames elapsed is equal to frames needed to switch between the images, update current wheels image
+      if (butterflyFrames.elapsed === butterflyFrames.neededToReleaseNewButterfly) {
+        // Create new butterfly
+        let butterfly = new Butterfly(butterflyImages, plant);
+        butterflies.push(butterfly);
+        // Reset frames elapsed to zero
+        butterflyFrames.elapsed = 0;
+      }
+
+      // Set releaseButterflies to false to prevent more butterflies from being released
+      releaseButterflies = false;
+    }
+
+    // Display butterflies and let them fly
+    // Also remove butterfly from array if it goes off canvas
+    for (let i = 0; i < butterflies.length; i++) {
+      let butterfly = butterflies[i];
+      // let butterfly fly
+      butterfly.fly();
+      // display butterfly
+      butterfly.display();
+
+      // If butterfly goes off canvas, remove it from butterflies array
+      if (butterfly.y < 0) {
+        butterflies.splice(i, 1);
+      }
+    }
 }
 
 // Display globe with unicorn and falling snow inside it

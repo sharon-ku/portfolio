@@ -27,7 +27,7 @@ nav.top-navigation {
   font-family: 'Poppins', Arial, sans-serif;
   width: 100%;
   /* background blue with 95% opacity */
-  background: rgba(63, 115, 140, 0.95);
+  /* background: rgba(63, 115, 140, 0.95); */
   text-transform: uppercase;
   text-align: center;
   font-size: 1.2em;
@@ -107,6 +107,28 @@ section.my-description {
   max-width: 300px;
 }
 
+section.hover-instructions {
+  font-family: 'Poppins', Arial, sans-serif;
+  /* light blue */
+  color: #b1eaf4;
+  text-align: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin-top: 30px;
+
+  /* background: green; */
+}
+
+.hover-instructions p {
+  /* font-style: italic; */
+  /* text-transform: uppercase; */
+  font-size: 0.8em;
+  /* light yellow */
+  color: #fdfeb8;
+  letter-spacing: 0.5px;
+  max-width: 250px;
+}
 
 
 /* ------------------------------------------ */
