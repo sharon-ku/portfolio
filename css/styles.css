@@ -6,7 +6,7 @@
 body {
   background: #3f738c;
   /* hide scrollbars */
-  /* overflow: hidden; */
+  overflow: hidden;
   /* cursor: url('../assets/images/cursor2.png', default); */
   /* position: relative; */
 }
