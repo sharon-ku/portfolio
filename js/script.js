@@ -84,6 +84,11 @@ let numSnowflakes = 20;
 // Wally the whale
 let whale;
 
+// array that stores fountain images that Wally will spew out
+let fountainImages = [];
+// number of fountain images
+let numFountainImages = 5;
+
 // ferris wheel
 let ferrisWheel;
 
@@ -127,6 +132,12 @@ function preload() {
   for (let i = 0; i < numUnicornImages; i++) {
     let unicornImage = loadImage(`assets/images/unicorn${i}.png`);
     unicornImages.push(unicornImage);
+  }
+
+  // store images of fountain inside fountainImages array
+  for (let i = 0; i < numFountainImages; i++) {
+    let fountainImage = loadImage(`assets/images/fountain${i}.png`);
+    fountainImages.push(fountainImage);
   }
 
   // store images of wheel inside ferrisWheelImage.wheels array
@@ -182,6 +193,9 @@ function setup() {
   // Create a new whale
   whale = new Whale();
 
+  // Create a new fountain
+  fountain = new Fountain(fountainImages, whale);
+
   // Create a new ferris wheel
   ferrisWheel = new FerrisWheel(ferrisWheelImage.wheels, ferrisWheelImage.stand);
 
@@ -231,6 +245,15 @@ function draw() {
   // If mouse hovers over plant, release butterflies at a certain ineterval
   // Butterflies flap wings
   createButterflies();
+
+  if (whale.overlapsWith(mouse)) {
+    fountain.timeToRelease = true;
+
+  }
+
+  if (fountain.timeToRelease) {
+    fountain.display();
+  }
 
   // Create a globe that contains all these behaviours:
   // Displays globe and unicorn

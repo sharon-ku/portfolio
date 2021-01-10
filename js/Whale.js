@@ -3,6 +3,9 @@ class Whale {
     // movement information
     this.x = (width / 2) + 140;
     this.y = height - 160;
+    // size information
+    this.width = 134;
+    this.height = 86;
     // animation information
     this.sprite = createSprite(this.x, this.y);
     this.whaleAnimation = loadAnimation('assets/images/whale0.png',
@@ -13,6 +16,18 @@ class Whale {
     this.whaleAnimation.frameDelay = 70;
     // adding animation to the sprite
     this.sprite.addAnimation('changeColor', this.whaleAnimation);
+  }
+
+  // Returns true if object overlaps with whale
+  overlapsWith(object) {
+    if (object.x < (this.x + this.width / 2) &&
+      object.x > (this.x - this.width / 2) &&
+      object.y < (this.y + this.height / 2) &&
+      object.y > (this.y - this.height / 2)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 }
