@@ -74,7 +74,7 @@ let globeBaseImage = undefined;
 // array that stores images of unicorn
 let unicornImages = [];
 // number of unicorn images
-let numUnicornImages = 2;
+let numUnicornImages = 4;
 
 // array that stores snowflakes
 let snowflakes = [];

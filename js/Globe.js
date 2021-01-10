@@ -46,8 +46,11 @@ class Globe {
     if (this.unicorn.framesElapsed === this.unicorn.framesBetweenImages) {
       if (this.unicorn.currentImage === 0) {
         this.unicorn.currentImage = 1;
-      }
-      else if (this.unicorn.currentImage === 1) {
+      } else if (this.unicorn.currentImage === 1) {
+        this.unicorn.currentImage = 2;
+      } else if (this.unicorn.currentImage === 2) {
+        this.unicorn.currentImage = 3;
+      } else if (this.unicorn.currentImage === 3) {
         this.unicorn.currentImage = 0;
       }
       // Reset frames elapsed to zero
