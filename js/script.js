@@ -76,6 +76,12 @@ let unicornImages = [];
 // number of unicorn images
 let numUnicornImages = 4;
 
+// array that stores sparks emitted from unicorn's horn
+let sparks = [];
+// number of sparks
+let numSparks = 10;
+
+
 // array that stores snowflakes
 let snowflakes = [];
 // number of snowflakes inside globe
@@ -190,6 +196,12 @@ function setup() {
     snowflakes.push(snowflake);
   }
 
+  // Create a new array that stores sparks
+  for (let i = 0; i < numSparks; i++) {
+    let spark = new Spark(globe);
+    sparks.push(spark);
+  }
+
   // Create a new whale
   whale = new Whale();
 
@@ -234,6 +246,10 @@ function draw() {
   // Set bg color
   background(bg.r, bg.g, bg.b);
 
+  // Set mouse's x and y position to cursor's position
+  mouse.x = mouseX;
+  mouse.y = mouseY;
+
   // Display floor
   floorWidth = width;
   floor.display(floorWidth);
@@ -246,13 +262,20 @@ function draw() {
   // Butterflies flap wings
   createButterflies();
 
+  // If the mouse hovers over the whale image, set timeToRelease fountain to true
   if (whale.overlapsWith(mouse)) {
     fountain.timeToRelease = true;
-
   }
 
+  // If it's time to release the fountain, display the fountain
   if (fountain.timeToRelease) {
     fountain.display();
+  }
+
+  // Display sparks
+  for (let i = 0; i < sparks.length; i++) {
+    let spark = sparks[i];
+    // spark.display();
   }
 
   // Create a globe that contains all these behaviours:
@@ -266,9 +289,7 @@ function draw() {
   // Lights animation when mouse hovers over ferris wheel
   createFerrisWheel();
 
-  // Set mouse's x and y position to cursor's position
-  mouse.x = mouseX;
-  mouse.y = mouseY;
+
 
   // Display circle on mouse's position
   // push();

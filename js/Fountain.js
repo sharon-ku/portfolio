@@ -11,12 +11,6 @@ class Fountain {
     // position information
     this.x = whale.x - 25;
     this.y = whale.y - 63;
-    // // opacity of butterfly
-    // this.opacity = {
-    //   current: 255,
-    //   max: 255,
-    //   min: 0,
-    // };
     // tracks when it's time to release fountain
     this.timeToRelease = false;
   }
@@ -29,18 +23,27 @@ class Fountain {
     if (this.framesElapsed === this.framesBetweenImages) {
       if (this.currentImage === 0) {
         this.currentImage = 1;
+        // Reset frames elapsed
+        this.framesElapsed = 2;
       } else if (this.currentImage === 1) {
         this.currentImage = 2;
+        // Reset frames elapsed
+        this.framesElapsed = 3;
       } else if (this.currentImage === 2) {
         this.currentImage = 3;
+        // Reset frames elapsed
+        this.framesElapsed = -5;
       } else if (this.currentImage === 3) {
         this.currentImage = 4;
+        // Reset frames elapsed
+        this.framesElapsed = -15;
       } else if (this.currentImage === 4) {
         this.currentImage = 0;
+        // Set timeToRelease fountain to false when animation is over
         this.timeToRelease = false;
+        // Reset frames elapsed
+        this.framesElapsed = -15;
       }
-      // Reset frames elapsed to zero
-      this.framesElapsed = 0;
     }
   }
 
