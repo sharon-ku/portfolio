@@ -1,3 +1,6 @@
+// Globe
+// Contains unicorn and is supported by base
+// When mouse hovers over globe, unicorn flaps wings and changes horn colors
 class Globe {
   constructor(globeImage, globeBaseImage, unicornImages) {
     // contains globe image

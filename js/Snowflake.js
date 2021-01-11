@@ -1,3 +1,5 @@
+// Snowflake
+// Falls to the bottom of the globe
 class Snowflake {
   constructor(globe) {
     // size of snowflake

@@ -1,3 +1,5 @@
+// Plant
+// Its leaves move around
 class Plant {
   constructor() {
     // movement information

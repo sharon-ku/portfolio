@@ -1,3 +1,5 @@
+// Wally the whale
+// Changes colors
 class Whale {
   constructor() {
     // movement information

@@ -1,3 +1,6 @@
+// Ferris wheel
+// Spins and is held up by a static stand
+// When mouse hovers over wheel, the lights change colors
 class FerrisWheel {
   constructor(ferrisWheelImages, ferrisWheelStandImage) {
     // position information

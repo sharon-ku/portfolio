@@ -1,3 +1,5 @@
+// Fountain
+// Shoots from top of whale's head when mouse hovers over whale
 class Fountain {
   constructor(fountainImages, whale) {
     // array containing fountain images

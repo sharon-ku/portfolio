@@ -31,10 +31,10 @@ let bg = {
   // hex code: #3f738c
 };
 
-// floor
-let floor;
-// floor width
-let floorWidth = 100;
+// table that holds objects
+let table;
+// table width
+let tableWidth = 100;
 
 // mouse information that follows cursor
 let mouse = {
@@ -181,8 +181,8 @@ function setup() {
   // paragraph = createP(`I am a graphic designer and illustrator based in Montreal.`);
   // paragraph.position(width/2, height/2);
 
-  // Create a new floor
-  floor = new Floor();
+  // Create a new table
+  table = new Table();
 
   // Create a new plant
   plant = new Plant();
@@ -250,9 +250,9 @@ function draw() {
   mouse.x = mouseX;
   mouse.y = mouseY;
 
-  // Display floor
-  floorWidth = width;
-  floor.display(floorWidth);
+  // Display table
+  tableWidth = width;
+  table.display(tableWidth);
 
   // Draw all sprites: whale animation, plant animation
   drawSprites();

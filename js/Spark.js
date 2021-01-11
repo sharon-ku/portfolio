@@ -1,4 +1,5 @@
-// Spark that shoots from the unicorn's horn when mouse hovers on globe
+// Spark
+// Emitted from the unicorn's horn when mouse hovers on globe
 class Spark {
   constructor(globe) {
     // size of spark line

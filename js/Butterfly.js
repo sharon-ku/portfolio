@@ -1,3 +1,5 @@
+// Butterfly
+// Flies away from plant when mouse hovers over the plant
 class Butterfly {
   constructor(butterflyImages, plant) {
     // array containing butterfly images

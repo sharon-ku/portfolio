@@ -1,3 +1,5 @@
+// Ferris wheel seat
+// Revolves around ferris wheel's center
 class FerrisWheelSeat {
   constructor(seatImage, initialAngle) {
     // stores image of seat
