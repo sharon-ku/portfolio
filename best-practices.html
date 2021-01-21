@@ -11,6 +11,7 @@
 
   <!-- CSS sheets -->
   <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/work.css">
   <link rel="stylesheet" href="css/works/best-practices.css">
 </head>
@@ -37,22 +38,22 @@
 
 
   <section class="hero">
-    <hgroup>
+    <hgroup class="slide-up show-on-scroll">
       <h1>Best Practices for Reopening During COVID-19</h1>
       <!-- <p>Insert Description here</p> -->
     </hgroup>
-    <figure>
+    <figure class="slide-up show-on-scroll">
       <img src="assets/images/works/best-practices/merchants-mockup.png" alt="book image">
     </figure>
   </section>
 
   <section class="content">
-    <p>
+    <p class="slide-up show-on-scroll">
       As part of my work at Eye-in Media, I designed the book layout for a user guide
       written by Nathalie Azoulay Singer. The book offers cost-effective solutions to mall owners
       on how to reopen theirs malls while prioritizing the safety of customers.
     </p>
-    <figure>
+    <figure class="slide-up show-on-scroll">
       <img src="assets/images/works/best-practices/cover.png" alt="book image">
       <img src="assets/images/works/best-practices/intro-mockup.png" alt="book image">
     </figure>
@@ -144,6 +145,8 @@
     document.getElementById("close-button").style.display = "none";
   }
 </script>
+
+<script src="js/show-on-scroll.js"></script>
 
 </body>
 </html>
