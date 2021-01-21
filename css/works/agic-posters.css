@@ -1,5 +1,5 @@
 body {
-  background: #8bcd88;
+  background: #787c33;
 }
 
 .hero hgroup {
@@ -32,6 +32,6 @@ body {
 }
 
 .link_to_next_page a:hover {
-  background: #ffd100;
-  color: black;
+  background: #e37c1d;
+  color: white;
 }

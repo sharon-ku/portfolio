@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sharon Ku</title>
+
+  <!-- Add favicon -->
+  <link rel="icon" href="assets/images/logo.png" sizes="16x16">
+
+  <!-- CSS sheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/work.css">
+  <link rel="stylesheet" href="css/works/hopping-dustballs.css">
+</head>
+
+<body>
+  <!-- Top navigation ********************************************** -->
+  <section class="logo">
+    <a href="index.html">
+      <img src="assets/images/logo.png" alt="logo">
+    </a>
+  </section>
+
+  <nav id="close-button">
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+  </nav>
+
+  <nav class="top-navigation">
+    <a href="javascript:void(0)" class="active">
+      <p onclick="openNav()">Works ☰</p>
+    </a>
+  </nav>
+  <!-- ********************************************** -->
+
+
+  <section class="hero">
+    <hgroup class="slide-up show-on-scroll">
+      <h1>Hopping Dustballs</h1>
+      <!-- <p>Insert Description here</p> -->
+    </hgroup>
+    <figure class="slide-up show-on-scroll">
+      <img src="assets/images/works/root-fruit/acorn.png" alt="root fruit card">
+  </section>
+
+  <section class="content">
+    <p class="slide-up show-on-scroll">
+
+
+
+    </p>
+    <figure class="slide-up show-on-scroll">
+      <img src="assets/images/works/hopping-dustballs/1.png" alt="game screenshot">
+      <img src="assets/images/works/hopping-dustballs/2.png" alt="game screenshot">
+      <img src="assets/images/works/hopping-dustballs/3.png" alt="game screenshot">
+      <img src="assets/images/works/hopping-dustballs/4.png" alt="game screenshot">
+      <img src="assets/images/works/hopping-dustballs/5.png" alt="game screenshot">
+      <img src="assets/images/works/hopping-dustballs/6.png" alt="game screenshot">
+      <img src="assets/images/works/hopping-dustballs/7.png" alt="game screenshot">
+      <img src="assets/images/works/hopping-dustballs/8.png" alt="game screenshot">
+      <img src="assets/images/works/hopping-dustballs/9.png" alt="game screenshot">
+      <img src="assets/images/works/hopping-dustballs/10.png" alt="game screenshot">
+      <img src="assets/images/works/hopping-dustballs/11.png" alt="game screenshot">
+      <img src="assets/images/works/hopping-dustballs/sketch.jpg" alt="game screenshot">
+    </figure>
+  </section>
+
+
+  <!-- Table of contents ********************************************** -->
+
+  <section id="table-of-contents">
+    <h1>Works</h1>
+    <section class="all-groups">
+      <section class="group" id="group1">
+        <h2>Visual communication</h2>
+        <a href="best-practices.html">
+          <p>Best Practices for Reopening During COVID-19</p>
+        </a>
+        <a href="world-of-type.html">
+          <p>The World of Type</p>
+        </a>
+        <a href="coccco-bag.html">
+          <p>The Coccco Bag</p>
+        </a>
+        <a href="milkweed-delights.html">
+          <p>Milkweed Delights</p>
+        </a>
+      </section>
+
+      <section class="group" id="group2">
+        <h2>Digital media</h2>
+        <a href="portfolio-website.html">
+          <p>Portfolio Website</p>
+        </a>
+        <a href="agic-posters.html">
+          <p>AGIC Social Media Posters</p>
+        </a>
+        <a href="mischievous-monkey.html">
+          <p>Mischievous Monkey</p>
+        </a>
+        <a href="rs-infographics.html">
+          <p>Reserve & Shop Infographics</p>
+        </a>
+      </section>
+
+      <section class="group" id="group3">
+        <h2>Built environment</h2>
+        <a href="butterfly-automata.html">
+          <p>Butterfly Automata</p>
+        </a>
+        <a href="dragon-sculpture.html">
+          <p>Dragon Sculpture in a Fantasy Gallery</p>
+        </a>
+      </section>
+
+      <section class="group" id="group4">
+        <h2>Game/Interactive design</h2>
+        <a href="stayhere.html">
+          <p>Stayhere</p>
+        </a>
+        <a href="snails-journey.html">
+          <p>A Snail's Journey</p>
+        </a>
+        <a href="root-fruit.html">
+          <p>Root Fruit</p>
+        </a>
+        <a href="hopping-dustballs.html">
+          <p>Hopping Dustballs</p>
+        </a>
+        <a href="hungry-fishies.html">
+          <p>Hungry Fishies</p>
+        </a>
+      </section>
+
+    </section>
+  </section>
+
+  <nav class="link_to_next_page">
+    <a href="hungry-fishies.html">
+      <div class="text_container">
+        <p>Hungry Fishies</p>
+      </div>
+    </a>
+  </nav>
+
+
+<script>
+  /* Open when someone clicks on the span element */
+  function openNav() {
+    document.getElementById("table-of-contents").style.width = "100%";
+    document.getElementById("table-of-contents").style.padding = "100px";
+    document.getElementById("close-button").style.display = "flex";
+  }
+
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+    document.getElementById("table-of-contents").style.width = "0%";
+    document.getElementById("table-of-contents").style.padding = "0px";
+    document.getElementById("close-button").style.display = "none";
+  }
+</script>
+
+<script src="js/show-on-scroll.js"></script>
+
+</body>
+</html>

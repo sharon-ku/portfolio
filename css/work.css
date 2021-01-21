@@ -76,7 +76,7 @@ nav.link_to_next_page {
   text-align: center;
   font-size: 1.5em;
   font-weight: normal;
-  height: 40vh;
+  height: 300px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
