@@ -112,9 +112,9 @@ nav.top-navigation {
 
 .top-navigation a:hover {
   /* no background */
-  /* background: rgba(255,255,255,0); */
+  background: rgba(255,255,255,0);
   /* background blue */
-  background: #3f738c;
+  /* background: #3f738c; */
   border: 3px solid #6fcce9;
   border-radius: 50px;
   /* blue */
@@ -522,11 +522,10 @@ section.text_and_image_block {
   /* border: 3px solid yellow; */
 }
 
-figure img {
-  width:100%;
+/* figure img {
+  width: 100%;
   padding: 0em 5em 1em 5em;
-  /* border: 3px solid green; */
-}
+} */
 
 /* Specific to MOODBOARD */
 /* .......................................... */

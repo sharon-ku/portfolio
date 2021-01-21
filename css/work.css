@@ -1,29 +1,64 @@
+body {
+  overflow: visible;
+}
+
 section.hero {
-  height: 50vh;
+  height: 90vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: center;
-  background: darkcyan;
+  align-items: flex-start;
 }
 
-.hero h1 {
+.hero hgroup {
+  position: fixed;
+  z-index: -1;
+}
+
+.hero hgroup h1 {
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.hero hgroup p {
   font-family: 'Poppins', Arial, sans-serif;
   /* light blue */
   color: #b1eaf4;
-  text-align: center;
-  font-size: 3em;
-  padding: 40px;
-  /* background: blue; */
-  /* letter-spacing: 3px; */
-  text-transform: capitalize;
-}
-
-.hero p {
-  font-family: 'Poppins', Arial, sans-serif;
-  /* light blue */
-  color: #b1eaf4;
-  text-align: center;
+  /* text-align: center; */
   padding: 0 40px;
   /* background: orange; */
+}
+
+.hero figure {
+  position: fixed;
+  z-index: -2;
+}
+
+.hero figure img {
+
+}
+
+section.content {
+  /* light grey */
+  background: #ebebeb;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.content p {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 80px 150px;
+  font-size: 1.5em;
+}
+
+.content figure {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content figure img {
+  width: 100%;
 }

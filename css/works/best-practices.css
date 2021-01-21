@@ -1,0 +1,34 @@
+body {
+  background: #bb4230;
+}
+
+.hero hgroup {
+  width: 37%;
+  margin-left: 80px;
+  top: 400px;
+  color: white;
+}
+
+.hero hgroup h1 {
+  /* light blue */
+  /* color: #b1eaf4; */
+  /* text-align: left; */
+  font-size: 2.7em;
+  padding: 40px;
+  /* background: blue; */
+  /* letter-spacing: 3px; */
+}
+
+.hero figure {
+  width: 70%;
+  right: 20px;
+  top: 60px;
+}
+
+.hero figure img {
+  width: 100%;
+}
+
+.content figure {
+  width: 100%;
+}
