@@ -22,14 +22,15 @@ class Whale {
 
   // Returns true if object overlaps with whale
   overlapsWith(object) {
-    if (object.x < (this.x + this.width / 2) &&
-      object.x > (this.x - this.width / 2) &&
-      object.y < (this.y + this.height / 2) &&
-      object.y > (this.y - this.height / 2)) {
-      return true;
-    } else {
-      return false;
-    }
+    return this.sprite.overlapPoint(object.x, object.y);
+    // if (object.x < (this.x + this.width / 2) &&
+    //   object.x > (this.x - this.width / 2) &&
+    //   object.y < (this.y + this.height / 2) &&
+    //   object.y > (this.y - this.height / 2)) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
   }
 
 }

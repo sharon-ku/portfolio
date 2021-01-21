@@ -89,10 +89,10 @@ class FerrisWheel {
 
   // Return true if mouse is overlapping with wheel
   overlapsWithMouse() {
-    if (mouseX > this.x - this.wheel.radius &&
-    mouseX < this.x + this.wheel.radius &&
-    mouseY > this.y - this.wheel.radius &&
-    mouseY < this.y + this.wheel.radius) {
+    if (camera.mouseX > this.x - this.wheel.radius &&
+    camera.mouseX < this.x + this.wheel.radius &&
+    camera.mouseY > this.y - this.wheel.radius &&
+    camera.mouseY < this.y + this.wheel.radius) {
       return true;
     }
     else {

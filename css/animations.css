@@ -44,7 +44,7 @@
 .slide-up {
 	opacity: 0;
 	transform: translateY(2em);
-	transition: all .3s .5s ease-out;
+	transition: all .3s .3s ease-out;
 /*	will-change: all;*/
 }
 

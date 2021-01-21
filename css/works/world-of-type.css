@@ -5,7 +5,7 @@ body {
 .hero hgroup {
   width: 37%;
   margin-left: 80px;
-  top: 600px;
+  top: 100px;
   color: white;
 }
 
@@ -18,9 +18,9 @@ body {
 }
 
 .hero figure {
-  width: 60%;
-  right: 20px;
-  top: 60px;
+  width: 50%;
+  right: 50px;
+  top: 40px;
 }
 
 .hero figure img {
@@ -29,4 +29,9 @@ body {
 
 .content figure {
   width: 90%;
+}
+
+.link_to_next_page a:hover {
+  background: #8bcd88;
+  color: white;
 }

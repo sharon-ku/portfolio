@@ -243,12 +243,17 @@ function windowResized() {
 //
 // Description of draw() goes here.
 function draw() {
+  // Set mouse's position to camera's position
+  mouse.x = camera.mouseX;
+  mouse.y = camera.mouseY;
+
+
   // Set bg color
   background(bg.r, bg.g, bg.b);
 
   // Set mouse's x and y position to cursor's position
-  mouse.x = mouseX;
-  mouse.y = mouseY;
+  // mouse.x = mouseX;
+  // mouse.y = mouseY;
 
   // Display table
   tableWidth = width;
