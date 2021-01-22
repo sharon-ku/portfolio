@@ -6,7 +6,7 @@ body {
   width: 37%;
   margin-left: 80px;
   top: 100px;
-  color: white;
+  color: #ddb55d;
 }
 
 .hero hgroup h1 {
@@ -36,6 +36,6 @@ body {
 }
 
 .link_to_next_page a:hover {
-  background: #791e23;
+  background: #315a69;
   color: white;
 }
