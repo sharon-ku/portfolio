@@ -11,18 +11,6 @@ body {
   /* position: relative; */
 }
 
-/* p {
-  text-align: center;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  font-family: 'Poppins', Arial, sans-serif;
-} */
-
-/* nav a {
-  color:#fff;
-} */
-
 section.logo {
   position: fixed;
   top: 28px;
@@ -188,8 +176,6 @@ section.hover-instructions {
 
 
 #table-of-contents {
-  /* background blue with 90% opacity */
-  /* background: rgba(63, 115, 140, 0.90); */
   /* dark blue with 95% opacity */
   background: rgba(41, 69, 88, 0.95);
   /* display: flex;
@@ -199,7 +185,7 @@ section.hover-instructions {
   height: 100vh;
   width: 0%;
   position: fixed;
-  top: 0px;
+  top: -20px;
   left: 0px;
   padding: 0px;
   z-index: 101;
@@ -210,9 +196,9 @@ section.hover-instructions {
 #table-of-contents h1 {
   /* light blue */
   color: #b1eaf4;
-  font-size: 3em;
+  font-size: 3.5em;
   text-transform: uppercase;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   /* width: 100%;
   text-align: center; */
 }
@@ -220,6 +206,7 @@ section.hover-instructions {
 #table-of-contents .all-groups {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
   /* width: 100%; */
   /* background: orange; */
 }
@@ -235,7 +222,7 @@ section.hover-instructions {
 
 #table-of-contents .group h2 {
   color: white;
-  font-size: 1.2em;
+  font-size: 1.5em;
   text-transform: uppercase;
   font-weight: normal;
   letter-spacing: 0.7px;
@@ -246,6 +233,7 @@ section.hover-instructions {
   text-decoration: none;
   /* blue */
   color: #6fcce9;
+  font-size: 1.2em;
 }
 
 #table-of-contents .group a:visited {
@@ -261,8 +249,8 @@ section.hover-instructions {
 }
 
 #table-of-contents #group1 a:hover {
-  /* pink */
-  color: #e6a2c2;
+  /* purple */
+  color: #dfd2fa;
 }
 
 #table-of-contents #group2 a:hover {
@@ -271,14 +259,16 @@ section.hover-instructions {
 }
 
 #table-of-contents #group3 a:hover {
-  /* green */
-  color: #a2e6d4;
+  /* pink */
+  color: #ffcce4;
 }
 
 #table-of-contents #group4 a:hover {
-  /* purple */
-  color: #b7a2e6;
+  /* green */
+  color: #b8fcea;
 }
+
+
 
 #table-of-contents p {
   margin-bottom: 20px;
