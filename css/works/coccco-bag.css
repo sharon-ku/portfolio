@@ -1,12 +1,12 @@
 body {
-  background: #ffd100;
+  background: #dfab7c;
 }
 
 .hero hgroup {
   width: 37%;
   margin-left: 80px;
   top: 100px;
-  color: white;
+  color: black;
 }
 
 .hero hgroup h1 {
@@ -19,8 +19,8 @@ body {
 
 .hero figure {
   width: 50%;
-  right: 50px;
-  top: 40px;
+  right: 150px;
+  top: 35px;
 }
 
 .hero figure img {

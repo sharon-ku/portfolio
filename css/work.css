@@ -64,6 +64,54 @@ section.content {
   width: 100%;
 }
 
+.content nav {
+  display: flex;
+  width: 100%;
+  letter-spacing: 0.05em;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 50px 10px 50px;
+  height: 100px;
+  /* background: blue; */
+  font-family: 'Poppins', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+
+
+.content nav {
+  /* background: #212226; */
+
+}
+
+.content nav a:link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal;
+  transition: all 0.3s;
+  /* background: white; */
+  border: 3px solid blue;
+}
+
+.content nav a:visited {
+  color: black;
+  border: 3px solid black;
+}
+
+.content nav a:hover {
+  font-weight: bold;
+  border: 10px solid black;
+}
+
+.content nav a:active {
+
+}
 
 /* Link to next page ------------------------------------ */
 
