@@ -1,11 +1,11 @@
 body {
-  background: #791e23;
+  background: #315a69;
 }
 
 .hero hgroup {
   width: 37%;
   margin-left: 80px;
-  top: 100px;
+  top: 200px;
   color: white;
 }
 
@@ -18,8 +18,8 @@ body {
 }
 
 .hero figure {
-  width: 50%;
-  right: 50px;
+  width: 30%;
+  right: 220px;
   top: 40px;
 }
 
@@ -29,6 +29,10 @@ body {
 
 .content figure {
   width: 90%;
+}
+
+.content figure img {
+  margin-bottom: 50px;
 }
 
 .link_to_next_page a:hover {

@@ -91,12 +91,11 @@ section.content {
   justify-content: center;
   width: 400px;
   height: 100%;
-  color: #fff;
   text-decoration: none;
   font-weight: normal;
+  color: black;
+  border: 3px solid black;
   transition: all 0.3s;
-  /* background: white; */
-  border: 3px solid blue;
 }
 
 .content nav a:visited {

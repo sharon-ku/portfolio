@@ -18,9 +18,9 @@ body {
 }
 
 .hero figure {
-  width: 60%;
+  width: 50%;
   right: 50px;
-  top: 0px;
+  top: -50px;
 }
 
 .hero figure img {
