@@ -1,12 +1,12 @@
 body {
-  background: #315a69;
+  background: #789076;
 }
 
 .hero hgroup {
   width: 37%;
   margin-left: 80px;
   top: 200px;
-  color: white;
+  color: black;
 }
 
 .hero hgroup h1 {

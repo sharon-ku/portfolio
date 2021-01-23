@@ -36,10 +36,10 @@ body {
 }
 
 .content p {
-  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .link_to_next_page a:hover {
-  background: #e2e4eb;
+  background: #c5c9d8;
   color: black;
 }
