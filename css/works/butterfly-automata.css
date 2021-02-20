@@ -31,6 +31,12 @@ body {
   width: 90%;
 }
 
+.gif {
+  width: auto;
+  max-width: 350px;
+  margin-bottom: 100px;
+}
+
 .technical-drawings img {
   margin-bottom: 20px;
 }

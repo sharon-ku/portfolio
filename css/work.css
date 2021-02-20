@@ -4,6 +4,7 @@ body {
 
 section.hero {
   height: 90vh;
+  max-height: 600px;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -31,6 +32,9 @@ section.hero {
 .hero figure {
   position: fixed;
   z-index: -2;
+
+  max-width: 700px;
+
 }
 
 .hero figure img {
@@ -77,8 +81,6 @@ section.content {
   text-transform: uppercase;
   font-size: 1.5em;
 }
-
-
 
 .content nav {
   /* background: #212226; */
