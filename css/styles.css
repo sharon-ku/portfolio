@@ -113,11 +113,15 @@ nav.top-navigation {
   color: #6fcce9;
 }
 
-section.my-name {
+section.article {
   display: flex;
-  flex-flow: wrap;
+  flex-flow: column;
+  height: 70vh;
   justify-content: center;
   align-items: center;
+}
+
+section.my-name {
   margin-top: 100px;
   width: 100%;
 }
@@ -137,9 +141,6 @@ section.my-description {
   /* light blue */
   color: #b1eaf4;
   text-align: center;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
   margin-top: 10px;
 
   /* background: green; */
@@ -156,10 +157,7 @@ section.hover-instructions {
   /* light blue */
   color: #b1eaf4;
   text-align: center;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  margin-top: 30px;
+  margin-top: 20px;
 
   /* background: green; */
 }
