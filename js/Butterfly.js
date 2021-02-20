@@ -19,12 +19,14 @@ class Butterfly {
     this.speed = random(0.5, 1);
     // height butterflies need to fly before they disappear
     this.disapperanceHeight = 100;
-    // // opacity of butterfly
-    // this.opacity = {
-    //   current: 255,
-    //   max: 255,
-    //   min: 0,
-    // };
+  }
+
+  // Update butterfly's behaviour
+  update() {
+    // let butterfly fly
+    this.fly();
+    // display butterfly
+    this.display();
   }
 
   // Let butterfly fly!

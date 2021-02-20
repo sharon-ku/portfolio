@@ -33,6 +33,19 @@ class Globe {
     }
   }
 
+  // Update all behaviour of globe
+  update(mouse) {
+    // If mouse hovers over globe, make unicorn flap wings
+    if (this.overlapsWith(mouse)) {
+      this.unicornFlapsWings();
+    }
+
+    // Display globe images: its base, the actual globe, unicorn inside
+    this.displayBase();
+    this.displayGlobe();
+    this.displayUnicorn();
+  }
+
   // Display unicorn image
   displayUnicorn() {
     push();

@@ -18,6 +18,20 @@ class Snowflake {
     };
   }
 
+  // Update all behaviour of snowflake
+  update(globe) {
+    // only display snowflake when it is inside the globe
+    if (this.isInsideGlobe(globe)) {
+      this.display();
+    }
+
+    // let snowflake fall
+    this.fall();
+
+    // wrap snowflake back to top once it reaches bottom of globe
+    this.wrapBackToTop(globe);
+  }
+
   // Returns true if object overlaps with globe
   isInsideGlobe(globe) {
     // Calculating distance between object's and globe's center points

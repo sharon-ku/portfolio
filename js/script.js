@@ -34,9 +34,9 @@ let bg = {
 // table that holds objects
 let table;
 // table width
-let tableWidth = 100;
+let tableWidth = undefined;
 
-// mouse information that follows cursor
+// mouse that follows cursor
 let mouse = {
   x: 0,
   y: 0,
@@ -48,8 +48,6 @@ let plant;
 
 // array that stores my pretty butterflies
 let butterflies = [];
-// number of butterflies
-let numButterflies = 4;
 // tracks whether it is time to release butterflies or not
 let releaseButterflies = false;
 
@@ -62,7 +60,7 @@ let butterflyFrames = {
 // array that stores images of butterfly
 let butterflyImages = [];
 // number of unicorn images
-let numButterflyImages = 2;
+const NUM_BUTTERFLY_IMAGES = 2;
 
 // globe that houses unicorn
 let globe;
@@ -74,18 +72,17 @@ let globeBaseImage = undefined;
 // array that stores images of unicorn
 let unicornImages = [];
 // number of unicorn images
-let numUnicornImages = 4;
+const NUM_UNICORN_IMAGES = 4;
 
 // array that stores sparks emitted from unicorn's horn
 let sparks = [];
 // number of sparks
 let numSparks = 10;
 
-
 // array that stores snowflakes
 let snowflakes = [];
 // number of snowflakes inside globe
-let numSnowflakes = 20;
+const NUM_SNOWFLAKES = 20;
 
 // Wally the whale
 let whale;
@@ -93,7 +90,7 @@ let whale;
 // array that stores fountain images that Wally will spew out
 let fountainImages = [];
 // number of fountain images
-let numFountainImages = 5;
+const NUM_FOUNTAIN_IMAGES = 5;
 
 // ferris wheel
 let ferrisWheel;
@@ -113,7 +110,7 @@ let ferrisWheelImage = {
 // array that contains ferris wheel seats
 let ferrisWheelSeats = [];
 // number of ferris wheel seats
-let numSeats = 6;
+const NUM_SEATS = 6;
 // angle used to position seat relative to wheel's center
 let seatInitialAngle = 0;
 
@@ -124,7 +121,7 @@ let seatInitialAngle = 0;
 // Preloads assets (images, sounds, fonts)
 function preload() {
   // store images of butterfly inside butterflyImages array
-  for (let i = 0; i < numButterflyImages; i++) {
+  for (let i = 0; i < NUM_BUTTERFLY_IMAGES; i++) {
     let butterflyImage = loadImage(`assets/images/butterfly${i}.png`);
     butterflyImages.push(butterflyImage);
   }
@@ -135,13 +132,13 @@ function preload() {
   globeBaseImage = loadImage(`assets/images/globeBase.png`);
 
   // store images of unicorn inside unicornImages array
-  for (let i = 0; i < numUnicornImages; i++) {
+  for (let i = 0; i < NUM_UNICORN_IMAGES; i++) {
     let unicornImage = loadImage(`assets/images/unicorn${i}.png`);
     unicornImages.push(unicornImage);
   }
 
   // store images of fountain inside fountainImages array
-  for (let i = 0; i < numFountainImages; i++) {
+  for (let i = 0; i < NUM_FOUNTAIN_IMAGES; i++) {
     let fountainImage = loadImage(`assets/images/fountain${i}.png`);
     fountainImages.push(fountainImage);
   }
@@ -177,10 +174,6 @@ function setup() {
   // Place canvas behind DOM elements
   canvas.style(`z-index`, `-1`);
 
-  // Create a paragraph containing description text
-  // paragraph = createP(`I am a graphic designer and illustrator based in Montreal.`);
-  // paragraph.position(width/2, height/2);
-
   // Create a new table
   table = new Table();
 
@@ -191,7 +184,7 @@ function setup() {
   globe = new Globe(globeImage, globeBaseImage, unicornImages);
 
   // Create new snowflakes and store them in snowflakes array
-  for (let i = 0; i < numSnowflakes; i++) {
+  for (let i = 0; i < NUM_SNOWFLAKES; i++) {
     let snowflake = new Snowflake(globe);
     snowflakes.push(snowflake);
   }
@@ -212,9 +205,9 @@ function setup() {
   ferrisWheel = new FerrisWheel(ferrisWheelImage.wheels, ferrisWheelImage.stand);
 
   // Create 6 new ferris wheel seats and push to ferrisWheelSeats array
-  for (let i = 0; i < numSeats; i++) {
+  for (let i = 0; i < NUM_SEATS; i++) {
     // The seat's initial angles are equally spaced across the perimeter of the ferris wheel:
-    seatInitialAngle = i * (TWO_PI / numSeats) + PI/2;
+    seatInitialAngle = i * (TWO_PI / NUM_SEATS) + PI/2;
     // Create a new seat positioned at the initial angle
     let ferrisWheelSeat = new FerrisWheelSeat(ferrisWheelImage.seat, seatInitialAngle);
     // Push to new seat to the ferrisWheelSeats array
@@ -241,47 +234,41 @@ function windowResized() {
 
 // draw()
 //
-// Description of draw() goes here.
+// Set mouse's x and y position, set background color, create all interactive table elements
 function draw() {
   // Set mouse's position to camera's position
   mouse.x = camera.mouseX;
   mouse.y = camera.mouseY;
 
-
   // Set bg color
   background(bg.r, bg.g, bg.b);
 
-  // Set mouse's x and y position to cursor's position
-  // mouse.x = mouseX;
-  // mouse.y = mouseY;
+  // Create table elements: table, butterflies, globe, ferris wheel, whale, plant
+  createTableElements();
 
+  // // Display sparks
+  // for (let i = 0; i < sparks.length; i++) {
+  //   let spark = sparks[i];
+  //   // spark.display();
+  // }
+
+}
+
+// Create table elements: table, butterflies, globe, ferris wheel, whale, plant
+function createTableElements() {
   // Display table
   tableWidth = width;
   table.display(tableWidth);
 
   // Draw all sprites: whale animation, plant animation
   drawSprites();
+  // Release fountain if mouse hovers over whale
+  releaseFountain();
 
   // Create butterflies that have the following behaviours:
   // If mouse hovers over plant, release butterflies at a certain ineterval
   // Butterflies flap wings
   createButterflies();
-
-  // If the mouse hovers over the whale image, set timeToRelease fountain to true
-  if (whale.overlapsWith(mouse)) {
-    fountain.timeToRelease = true;
-  }
-
-  // If it's time to release the fountain, display the fountain
-  if (fountain.timeToRelease) {
-    fountain.display();
-  }
-
-  // Display sparks
-  for (let i = 0; i < sparks.length; i++) {
-    let spark = sparks[i];
-    // spark.display();
-  }
 
   // Create a globe that contains all these behaviours:
   // Displays globe and unicorn
@@ -293,17 +280,6 @@ function draw() {
   // Display rotating ferris wheel and seats that revolve around it
   // Lights animation when mouse hovers over ferris wheel
   createFerrisWheel();
-
-
-
-  // Display circle on mouse's position
-  // push();
-  // fill(255);
-  // ellipse(mouse.x, mouse.y, mouse.size);
-  // pop();
-
-
-
 }
 
 // Create butterflies that have the following behaviours:
@@ -336,10 +312,8 @@ function createButterflies() {
     // Also remove butterfly from array if it goes off canvas
     for (let i = 0; i < butterflies.length; i++) {
       let butterfly = butterflies[i];
-      // let butterfly fly
-      butterfly.fly();
-      // display butterfly
-      butterfly.display();
+      // let butterfly fly and display it
+      butterfly.update();
 
       // If butterfly goes off canvas, remove it from butterflies array
       if (butterfly.y < 0) {
@@ -351,22 +325,13 @@ function createButterflies() {
 // Display globe with unicorn and falling snow inside it
 // And unicorn flaps wings when mouse hovers over globe
 function createGlobe() {
-  // Display snowflakes, let them fall, and wrap to top when they reach the bottom of the globe
-  // These snowflakes are displayed behind the globe
+  // Release snowflakes behind the globe
   releaseSnowflakes();
 
-  // If mouse hovers over globe, make unicorn flap wings
-  if (globe.overlapsWith(mouse)) {
-    globe.unicornFlapsWings();
-  }
+  // Update all behaviour of globe
+  globe.update(mouse);
 
-  // Display globe images: its base, the actual globe, unicorn inside
-  globe.displayBase();
-  globe.displayGlobe();
-  globe.displayUnicorn();
-
-  // Display snowflakes, let them fall, and wrap to top when they reach the bottom of the globe
-  // These snowflakes are released in front of the globe
+  // Release snowflakes in front of the globe
   releaseSnowflakes();
 }
 
@@ -374,16 +339,7 @@ function createGlobe() {
 function releaseSnowflakes() {
   for (let i = 0; i < snowflakes.length; i++) {
     let snowflake = snowflakes[i];
-    // let snowflakes fall
-    snowflake.fall();
-
-    // only display snowflakes when it is inside the globe
-    if (snowflake.isInsideGlobe(globe)) {
-      snowflake.display();
-    }
-
-    // wrap snowflake back to top once it reaches bottom of globe
-    snowflake.wrapBackToTop(globe);
+    snowflake.update(globe);
   }
 }
 
@@ -402,5 +358,18 @@ function createFerrisWheel() {
   // If mouse overlaps with ferris wheel, cue lights animation by switching between wheel images
   if (ferrisWheel.overlapsWithMouse()) {
     ferrisWheel.animateWheelImages();
+  }
+}
+
+// Release fountain if mouse hovers over whale
+function releaseFountain() {
+  // If the mouse hovers over the whale image, set timeToRelease fountain to true
+  if (whale.overlapsWith(mouse)) {
+    fountain.timeToRelease = true;
+  }
+
+  // If it's time to release the fountain, display the fountain
+  if (fountain.timeToRelease) {
+    fountain.display();
   }
 }
