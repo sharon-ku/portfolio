@@ -30,7 +30,19 @@ body {
 }
 
 .content figure {
+  margin-top: 80px;
   width: 90%;
+  overflow: hidden;
+}
+
+.content figure video {
+  /* code from: https://stackoverflow.com/questions/16853203/unwanted-border-appearing-on-video-element */
+  /* hide overflow of video */
+  width: 102%;
+  height: 102%;
+  left: -5px;
+  margin: -10px;
+  top: 0;
 }
 
 .content figure img {
