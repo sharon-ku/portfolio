@@ -1,7 +1,11 @@
 /* Poppins */
-@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap';
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap";
 
-* {margin: 0px; padding: 0px; box-sizing: border-box;}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
 body {
   background: #3f738c;
@@ -24,7 +28,7 @@ section.logo {
 }
 
 nav#close-button {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   text-transform: uppercase;
   text-align: center;
   font-size: 2em;
@@ -40,7 +44,9 @@ nav#close-button {
   z-index: 102;
 }
 
-#close-button a:link, #close-button a:visited, #close-button a:active {
+#close-button a:link,
+#close-button a:visited,
+#close-button a:active {
   padding: 0px 50px;
   text-decoration: none;
   margin-right: 50px;
@@ -55,7 +61,7 @@ nav#close-button {
 
 #close-button a:hover {
   /* no background */
-  background: rgba(255,255,255,0);
+  background: rgba(255, 255, 255, 0);
   /* background blue */
   /* background: #3f738c; */
   border: 3px solid #6fcce9;
@@ -64,9 +70,8 @@ nav#close-button {
   color: #6fcce9;
 }
 
-
 nav.top-navigation {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.2em;
@@ -84,7 +89,9 @@ nav.top-navigation {
   z-index: 100;
 }
 
-.top-navigation a:link, .top-navigation a:visited, .top-navigation a:active {
+.top-navigation a:link,
+.top-navigation a:visited,
+.top-navigation a:active {
   padding: 10px 15px;
   text-decoration: none;
   margin-right: 10px;
@@ -104,7 +111,7 @@ nav.top-navigation {
 
 .top-navigation a:hover {
   /* no background */
-  background: rgba(255,255,255,0);
+  background: rgba(255, 255, 255, 0);
   /* background blue */
   /* background: #3f738c; */
   border: 3px solid #6fcce9;
@@ -126,7 +133,7 @@ section.my-name {
 }
 
 .my-name h1 {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   /* light blue */
   color: #b1eaf4;
   text-align: center;
@@ -136,7 +143,7 @@ section.my-name {
 }
 
 section.my-description {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   /* light blue */
   color: #b1eaf4;
   text-align: center;
@@ -152,7 +159,7 @@ section.my-description {
 }
 
 section.hover-instructions {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   /* light blue */
   color: #b1eaf4;
   text-align: center;
@@ -171,7 +178,6 @@ section.hover-instructions {
   max-width: 250px;
 }
 
-
 #table-of-contents {
   /* dark blue with 95% opacity */
   background: rgba(41, 69, 88, 0.95);
@@ -186,7 +192,7 @@ section.hover-instructions {
   left: 0px;
   padding: 0px;
   z-index: 101;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   overflow: scroll;
 }
 
@@ -226,7 +232,8 @@ section.hover-instructions {
   margin-bottom: 20px;
 }
 
-#table-of-contents .group a:link, #table-of-contents .group a:active {
+#table-of-contents .group a:link,
+#table-of-contents .group a:active {
   text-decoration: none;
   /* blue */
   color: #6fcce9;
@@ -265,323 +272,6 @@ section.hover-instructions {
   color: #b8fcea;
 }
 
-
-
 #table-of-contents p {
   margin-bottom: 20px;
-}
-
-
-/* ------------------------------------------ */
-
-
-
-
-
-
-
-
-
-
-
-/* nav a {
-  color:#fff;
-}
-
-nav.top_navigation {
-  font-family: 'Montserrat', sans-serif;
-  width: 100%;
-  background-color: rgb(33,34,38,0.9);
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: normal;
-  height: 4em;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 1em;
-  position: fixed;
-  z-index: 99;
-}
-
-.top_navigation a:link {
-  border: 1px solid #fff;
-  padding: 10px 25px;
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  margin-left: 0.5em;
-  margin-right: 1em;
-  font-weight: bold;
-
-}
-
-.top_navigation a.active {
-  color: #15cdcb;
-  border: 3px solid #15cdcb;
-}
-
-.top_navigation a:hover {
-  border: 1px solid #15cdcb;
-  color: #15cdcb;
-} */
-
-section.header_title {
-  width: 100%;
-  height: 70vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  text-shadow: 2px 2px 20px #fff;
-}
-
-.header_title video {
-  object-fit: cover;
-  width: 100%;
-  height: 70vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index:-1;
-}
-
-section.header_lrg {
-  background: #212226; /* raisin black */
-  width: 100%;
-  height: 80vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-flow: row wrap;
-}
-
-.header_lrg header {
-  color: #fff;
-  margin: 10em;
-}
-
-.header_lrg h1 {
-	font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-	font-size: 5.5em;
-	/* line-height: 1.2em; */
-  padding-bottom: 40px;
-	text-transform: uppercase;
-}
-
-.header_lrg h2 {
-  font-family: 'Lora', serif;
-  font-weight: normal;
-  font-size: 1.5em;
-}
-
-section.text1 {
-  background: #212226; /* raisin black */
-  width: 100%;
-  min-height: 30vh;
-  height: auto;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 2em;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.text1 article {
-  width: 100%;
-  padding: 5em;
-  margin-right: 2em;
-}
-
-.text1 article h1 {
-  font-size: 36px;
-  color: #fff;
-  text-transform: capitalize;
-  margin-bottom: 20px;
-  padding: 30px 0 10px 0;
-}
-
-.text1 article h2 {
-  font-weight: bold;
-  font-size: 1.5em;
-  color: #fff;
-  text-transform: capitalize;
-  margin-top: 50px;
-  margin-bottom: 15px;
-}
-
-.text1 article p, .text1 article li, .text1 nav {
-  font-size: 1.1em;
-  line-height: 1.8em;
-  margin-bottom: 30px;
-  color: #fff;
-}
-
-section.twoline_header {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  min-height: 30vh;
-  height: auto;
-  width: 100%;
-}
-
-.twoline_header hgroup {
-  text-align: center;
-}
-
-.twoline_header h2 {
-  font-family: 'Lora', serif;
-  font-size: 2em;
-  line-height: 1.5em;
-  text-transform: lowercase;
-  font-weight: normal;
-  font-style: italic;
-}
-
-.twoline_header h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 4em;
-  line-height: 1em;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-style: normal;
-}
-
-section.white_text {
-  color: white;
-}
-
-
-/* Specific to WIREFRAMES */
-/* .......................................... */
-
-section.colx2 {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 1em;
-}
-
-.colx2 article {
-  width: 50%;
-  padding: 0 20px 20px 20px;
-}
-
-.colx2 article p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.3em;
-  line-height: 1.8em;
-  margin-bottom: 20px;
-  color: #000;
-  padding: 0em 3em;
-}
-
-.colx2 figure {
-  width: 40%;
-  /* margin-right: 10%; */
-}
-
-/* ---------------- */
-
-
-section.text_and_image_block {
-  display: flex;
-  flex-flow: row wrap;
-  /* min-height: 50vh; */
-  height: auto;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0 1em;
-}
-
-.text_and_image_block article {
-  width: 70%;
-}
-
-.text_and_image_block article p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.3em;
-  line-height: 1.8em;
-  margin-bottom: 20px;
-  color: #000;
-  padding: 1em 7em;
-  /* border: 3px solid yellow; */
-}
-
-/* figure img {
-  width: 100%;
-  padding: 0em 5em 1em 5em;
-} */
-
-/* Specific to MOODBOARD */
-/* .......................................... */
-
-
-
-section.inspiration1 {
-  background: url("../images/moodboard/inspo1-netflix/netflix-bg.jpg") no-repeat center bottom;
-	background-size: cover;
-  width: 100%;
-  min-height: 80vh;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  padding: 0 70px;
-}
-
-
-
-
-
-/* ----------------------------------------------------------------------------- */
-
-section.bibliography {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-flow: row wrap;
-  width: 100%;
-  padding: 3em;
-  /* background: #212226; *//* raisin black */
-  background: #ddd;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.bibliography h1 {
-  font-family: 'Lora', serif;
-  text-align: center;
-  width: 100%;
-  font-weight: normal;
-  padding: 1em;
-  font-style: italic;
-  text-transform: lowercase;
-  font-size: 2.5em;
-}
-
-.bibliography ol {
-  font-size: 1em;
-  list-style: none;
-  padding: 1.5em 4em;
-  column-count:2;
-  column-gap: 40px;
-}
-
-.bibliography ol li {
-  padding-bottom: 1.5em;
-}
-
-footer {
-  background-color: #111;
-  padding: 20px;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  font-style: italic;
-  font-size: 14px;
 }

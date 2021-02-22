@@ -1,3 +1,5 @@
+/* === TABLET LAYOUT INHERITS FROM MOBILE 600PX and higher === */
+
 body {
   overflow: visible;
 }
@@ -17,11 +19,11 @@ section.hero {
 }
 
 .hero hgroup h1 {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 .hero hgroup p {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   /* light blue */
   color: #b1eaf4;
   /* text-align: center; */
@@ -34,11 +36,9 @@ section.hero {
   z-index: -2;
 
   max-width: 700px;
-
 }
 
 .hero figure img {
-
 }
 
 section.content {
@@ -50,7 +50,7 @@ section.content {
 }
 
 .content p {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   margin: 80px 150px;
   font-size: 1.5em;
 }
@@ -77,14 +77,13 @@ section.content {
   margin: 50px 50px 10px 50px;
   height: 100px;
   /* background: blue; */
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   text-transform: uppercase;
   font-size: 1.5em;
 }
 
 .content nav {
   /* background: #212226; */
-
 }
 
 .content nav a:link {
@@ -111,14 +110,13 @@ section.content {
 }
 
 .content nav a:active {
-
 }
 
 /* Link to next page ------------------------------------ */
 
 nav.link_to_next_page {
   background: #212226; /* raisin black */
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 0.05em;
   width: 100%;
   text-transform: uppercase;
@@ -148,7 +146,6 @@ nav.link_to_next_page {
 }
 
 .link_to_next_page a:hover {
-
 }
 
 .link_to_next_page a:active {
