@@ -1,4 +1,4 @@
-/* === TABLET LAYOUT INHERITS FROM MOBILE 600PX and higher === */
+/* === DESKTOP LAYOUT INHERITS FROM MOBILE AND TABLET 980PX and higher === */
 
 body {
   overflow: visible;
@@ -34,7 +34,6 @@ section.hero {
 .hero figure {
   position: fixed;
   z-index: -2;
-
   max-width: 700px;
 }
 
@@ -154,4 +153,26 @@ nav.link_to_next_page {
 
 .text_container {
   margin-right: 70px;
+}
+
+/* === TABLET LAYOUT INHERITS FROM MOBILE 600PX 980PX === */
+@media only screen and (max-width: 980px) {
+  section.hero {
+    max-height: 500px;
+  }
+
+  .content p {
+    font-family: "Poppins", Arial, sans-serif;
+    margin: 45px 70px;
+    font-size: 1.3em;
+  }
+
+  .content figure {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+/* === MOBILE LAYOUT INHERITS FROM DESKTOP 0PX 600PX === */
+@media only screen and (max-width: 600px) {
 }

@@ -213,7 +213,6 @@ section.hover-instructions {
   flex-flow: row wrap;
   justify-content: space-between;
   /* width: 100%; */
-  /* background: orange; */
 }
 
 #table-of-contents .all-groups .group {
@@ -222,7 +221,6 @@ section.hover-instructions {
   height: 100%;
   margin-right: 30px;
   margin-bottom: 50px;
-  /* background: darkgoldenrod; */
 }
 
 #table-of-contents .group h2 {
@@ -293,7 +291,7 @@ section.hover-instructions {
   }
 
   #table-of-contents .group h2 {
-    font-size: 1.1em;
+    font-size: 1.15em;
     font-weight: bold;
     letter-spacing: 1px;
   }
