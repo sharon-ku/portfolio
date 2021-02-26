@@ -7,7 +7,6 @@ body {
   margin-left: 80px;
   top: 100px;
   color: white;
-
 }
 
 .hero hgroup h1 {
@@ -43,4 +42,14 @@ body {
 .link_to_next_page a:hover {
   background: #dfab7c;
   color: black;
+}
+
+/* === TABLET LAYOUT INHERITS FROM MOBILE 600PX 980PX === */
+@media only screen and (max-width: 980px) {
+  .hero .chicks-image figure {
+    position: fixed;
+    left: 300px;
+    top: 300px;
+    width: 200px;
+  }
 }

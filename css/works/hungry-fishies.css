@@ -30,12 +30,12 @@ body {
 }
 
 .content figure {
-  margin-top: 80px;
+  /* margin-top: 80px; */
   width: 90%;
   overflow: hidden;
 }
 
-.content figure video {
+.content video {
   /* code from: https://stackoverflow.com/questions/16853203/unwanted-border-appearing-on-video-element */
   /* hide overflow of video */
   width: 102%;
@@ -46,7 +46,7 @@ body {
 }
 
 .content figure img {
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .link_to_next_page a:hover {
@@ -56,9 +56,11 @@ body {
 
 /* TOP NAVIGATION NAV */
 
-.top-navigation a:link, .top-navigation a:visited, .top-navigation a:active {
+.top-navigation a:link,
+.top-navigation a:visited,
+.top-navigation a:active {
   /* no background */
-  background: rgba(255,255,255,0);
+  background: rgba(255, 255, 255, 0);
   border: 3px solid #3f738c;
   border-radius: 50px;
   /* blue */
@@ -67,7 +69,7 @@ body {
 
 .top-navigation a.active {
   /* no background */
-  background: rgba(255,255,255,0);
+  background: rgba(255, 255, 255, 0);
   border: 3px solid #3f738c;
   border-radius: 50px;
   /* blue */

@@ -21,6 +21,8 @@ body {
   width: 30%;
   right: 220px;
   top: 40px;
+
+  max-width: 350px;
 }
 
 .hero figure img {
@@ -32,10 +34,21 @@ body {
 }
 
 .content figure img {
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
+}
+
+.phone-mockup img {
+  padding: 0 200px;
 }
 
 .link_to_next_page a:hover {
   background: #c3cd7e;
   color: white;
+}
+
+/* === TABLET LAYOUT INHERITS FROM MOBILE 600PX 980PX === */
+@media only screen and (max-width: 980px) {
+  .hero figure {
+    right: 100px;
+  }
 }

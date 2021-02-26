@@ -54,6 +54,13 @@ section.content {
   font-size: 1.5em;
 }
 
+.content h2 {
+  font-family: "Poppins", Arial, sans-serif;
+  text-transform: uppercase;
+  margin: 80px 150px;
+  font-size: 1.5em;
+}
+
 .content figure {
   width: 100%;
   display: flex;
@@ -65,6 +72,22 @@ section.content {
 
 .content figure img {
   width: 100%;
+}
+
+.add-margin-below img {
+  margin-bottom: 70px;
+}
+
+.content .source {
+  font-size: 1em;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+  margin: 0px;
+}
+
+.content .video-container {
+  width: 90%;
+  overflow: hidden;
 }
 
 .content nav {

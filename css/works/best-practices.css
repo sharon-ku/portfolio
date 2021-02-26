@@ -23,6 +23,8 @@ body {
   width: 70%;
   right: 20px;
   top: 60px;
+
+  max-width: 1000px;
 }
 
 .hero figure img {
@@ -36,4 +38,11 @@ body {
 .link_to_next_page a:hover {
   background: #8bcd88;
   color: white;
+}
+
+/* === TABLET LAYOUT INHERITS FROM MOBILE 600PX 980PX === */
+@media only screen and (max-width: 980px) {
+  .hero hgroup h1 {
+    font-size: 1.8em;
+  }
 }
