@@ -46,6 +46,9 @@ section.content {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+
+  /* max-width: 1300px;
+  margin: 0px auto; */
 }
 
 .content p {
@@ -72,6 +75,9 @@ section.content {
 
 .content figure img {
   width: 100%;
+
+  /* max-width: 1300px;
+  margin: 0px auto; */
 }
 
 .add-margin-below img {
