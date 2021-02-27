@@ -1,202 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sharon Ku</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sharon Ku</title>
+    <!-- Add favicon -->
+    <link rel="icon" href="assets/images/logo.png" sizes="16x16" />
 
-  <!-- Add favicon -->
-  <link rel="icon" href="assets/images/logo.png" sizes="16x16">
+    <!-- CSS sheets -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/work.css" />
+    <link rel="stylesheet" href="css/works/hungry-fishies.css" />
+  </head>
 
-  <!-- CSS sheets -->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/work.css">
-  <link rel="stylesheet" href="css/works/hungry-fishies.css">
-</head>
+  <body>
+    <!-- Top navigation ********************************************** -->
+    <section class="logo">
+      <a href="index.html">
+        <img src="assets/images/logo.png" alt="logo" />
+      </a>
+    </section>
 
-<body>
-  <!-- Top navigation ********************************************** -->
-  <section class="logo">
-    <a href="index.html">
-      <img src="assets/images/logo.png" alt="logo">
-    </a>
-  </section>
+    <nav id="close-button">
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+    </nav>
 
-  <nav id="close-button">
-    <!-- Button to close the overlay navigation -->
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-  </nav>
-
-  <nav class="top-navigation">
-    <a href="javascript:void(0)" class="active" onclick="openNav()">
-      <p>Works ☰</p>
-    </a>
-  </nav>
-  <!-- ********************************************** -->
-
-
-  <section class="hero">
-    <hgroup class="slide-up show-on-scroll">
-      <h1>Hungry Fishies</h1>
-      <!-- <p>Insert Description here</p> -->
-    </hgroup>
-    <figure class="slide-up show-on-scroll">
-      <img src="assets/images/works/hungry-fishies/hero.png" alt="hungry fishies game">
-  </section>
-
-  <section class="content">
-    <nav>
-      <a href="https://sharon-ku.github.io/cart253/projects/project2/" target="_blank">
-        Click here to play!
+    <nav class="top-navigation">
+      <a href="javascript:void(0)" class="active" onclick="openNav()">
+        <p>Works ☰</p>
       </a>
     </nav>
-    <nav>
-      <a href="https://github.com/sharon-ku/cart253/tree/master/projects/project2" target="_blank">Link to code</a>
+    <!-- ********************************************** -->
+
+    <section class="hero">
+      <hgroup class="slide-up show-on-scroll">
+        <h1>Hungry Fishies</h1>
+        <!-- <p>Insert Description here</p> -->
+      </hgroup>
+      <figure class="slide-up show-on-scroll">
+        <img
+          src="assets/images/works/hungry-fishies/hero.png"
+          alt="hungry fishies game"
+        />
+      </figure>
+    </section>
+
+    <section class="content">
+      <nav>
+        <a
+          href="https://sharon-ku.github.io/cart253/projects/project2/"
+          target="_blank"
+        >
+          Click here to play!
+        </a>
+      </nav>
+      <nav>
+        <a
+          href="https://github.com/sharon-ku/cart253/tree/master/projects/project2"
+          target="_blank"
+          >Link to code</a
+        >
+      </nav>
+
+      <p class="slide-up show-on-scroll">
+        I designed an <b>interactive game</b> using JavaScript's p5.js and
+        p5.sound libraries. I simulated a fish tank environment containing
+        adorable fish and creatures that each have their unique personalities
+        and quirks. The user's goal is to feed the fish by guiding them to the
+        food using a finger.
+      </p>
+
+      <!-- <figure class="slide-up show-on-scroll"> -->
+      <section class="video-container" class="slide-up show-on-scroll">
+        <video controls>
+          <source
+            src="assets/images/works/hungry-fishies/hungry-fishies.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </section>
+      <!-- </figure> -->
+
+      <p class="slide-up show-on-scroll">
+        For my <b>technical explorations</b>, I relied on the powerful effect
+        that emerges by combining object-oriented programming, inheritance, and
+        arrays. This allowed me to make modular fish that possess different
+        behaviours and keep track of their separate food intake. Because many
+        objects interacted with each other (like the fish and the food, or the
+        food and the food tracker), I practiced providing objects as parameters
+        to the methods of other objects.
+      </p>
+
+      <figure class="slide-up show-on-scroll">
+        <section class="add-margin-below">
+          <img
+            src="assets/images/works/hungry-fishies/1.png"
+            alt="game screenshot"
+          />
+        </section>
+        <img
+          src="assets/images/works/hungry-fishies/2.png"
+          alt="game screenshot"
+        />
+
+        <p class="slide-up show-on-scroll">
+          My <b>greatest technical achievements</b> were implementing automatic
+          movement in the fish and getting the clownfish to feed the anemone.
+          The clownfish would either grab the food and swim off to the side of
+          the tank, or eat the food it was supposed to feed the anemone - how
+          frustrating! Yet, when I got it to work, it was also the most
+          satisfying accomplishment I felt during the whole project.
+        </p>
+
+        <img
+          src="assets/images/works/hungry-fishies/3.png"
+          alt="game screenshot"
+        />
+
+        <p class="slide-up show-on-scroll">
+          I created all the images in Photoshop and incorporated
+          <b>interactivity</b> in all stages of the game (e.g. in the rules and
+          with the musical fish). I also introduced lively colors to the tank’s
+          inhabitants and animated their images to make them feel more
+          realistic.
+        </p>
+
+        <img
+          src="assets/images/works/hungry-fishies/4.png"
+          alt="game screenshot"
+        />
+
+        <p class="slide-up show-on-scroll">
+          The players who successfully satisfy the bellies of all the ravenous
+          fish are rewarded with the product of my poetic skills and the fish’s
+          pooping skills.
+        </p>
+
+        <img
+          src="assets/images/works/hungry-fishies/5.png"
+          alt="game screenshot"
+        />
+      </figure>
+    </section>
+
+    <!-- Table of contents ********************************************** -->
+
+    <section id="table-of-contents">
+      <h1>Works</h1>
+      <section class="all-groups">
+        <section class="group" id="group1">
+          <h2>Game/Interactive Design</h2>
+          <a href="hungry-fishies.html">
+            <p>Hungry Fishies</p>
+          </a>
+          <a href="root-fruit.html">
+            <p>Root Fruit</p>
+          </a>
+          <a href="stayhere.html">
+            <p>Stayhere</p>
+          </a>
+          <a href="snails-journey.html">
+            <p>A Snail's Journey</p>
+          </a>
+          <a href="hopping-dustballs.html">
+            <p>Hopping Dustballs</p>
+          </a>
+        </section>
+
+        <section class="group" id="group2">
+          <h2>Digital media</h2>
+          <a href="mischievous-monkey.html">
+            <p>Mischievous Monkey</p>
+          </a>
+          <a href="portfolio-website.html">
+            <p>Portfolio Website</p>
+          </a>
+          <a href="agic-posters.html">
+            <p>AGIC Social Media Posters</p>
+          </a>
+          <a href="rs-infographics.html">
+            <p>Reserve & Shop Infographics</p>
+          </a>
+        </section>
+
+        <section class="group" id="group3">
+          <h2>Visual communication</h2>
+          <a href="best-practices.html">
+            <p>Best Practices for Reopening During COVID-19</p>
+          </a>
+          <a href="world-of-type.html">
+            <p>The World of Type</p>
+          </a>
+          <a href="coccco-bag.html">
+            <p>The Coccco Bag</p>
+          </a>
+          <a href="milkweed-delights.html">
+            <p>Milkweed Delights</p>
+          </a>
+        </section>
+
+        <section class="group" id="group4">
+          <h2>Sculptural and 3D Environments</h2>
+          <a href="dragon-sculpture.html">
+            <p>Dragon Sculpture in a Fantasy Gallery</p>
+          </a>
+          <a href="butterfly-automata.html">
+            <p>Butterfly Automata</p>
+          </a>
+        </section>
+      </section>
+    </section>
+
+    <nav class="link_to_next_page">
+      <a href="root-fruit.html">
+        <div class="text_container">
+          <p>Root Fruit</p>
+        </div>
+      </a>
     </nav>
 
-    <p class="slide-up show-on-scroll">
-      I designed an <b>interactive game</b> using JavaScript's p5.js and p5.sound libraries. I simulated a fish tank environment containing adorable fish and creatures that each have their unique personalities and quirks. The user's goal is to feed the fish by guiding them to the food using a finger.
-    </p>
+    <script>
+      /* Open when someone clicks on the span element */
+      function openNav() {
+        document.getElementById("table-of-contents").style.width = "100%";
+        document.getElementById("table-of-contents").style.padding = "100px";
+        document.getElementById("close-button").style.display = "flex";
+      }
 
-    <!-- <figure class="slide-up show-on-scroll"> -->
-    <section class="video-container" class="slide-up show-on-scroll">
-      <video controls>
-        <source src="assets/images/works/hungry-fishies/hungry-fishies.mp4" type="video/mp4">
-      </video>
-    </section>
-    <!-- </figure> -->
+      /* Close when someone clicks on the "x" symbol inside the overlay */
+      function closeNav() {
+        document.getElementById("table-of-contents").style.width = "0%";
+        document.getElementById("table-of-contents").style.padding = "0px";
+        document.getElementById("close-button").style.display = "none";
+      }
+    </script>
 
-    <p class="slide-up show-on-scroll">
-      For my <b>technical explorations</b>, I relied on the powerful effect that emerges by combining object-oriented programming, inheritance, and arrays. This allowed me to make modular fish that possess different behaviours and keep track of their separate food intake. Because many objects interacted with each other (like the fish and the food, or the food and the food tracker), I practiced providing objects as parameters to the methods of other objects.
-    </p>
-
-    <figure class="slide-up show-on-scroll">
-      <section class="add-margin-below">
-        <img src="assets/images/works/hungry-fishies/1.png" alt="game screenshot">
-      </section>
-      <img src="assets/images/works/hungry-fishies/2.png" alt="game screenshot">
-
-      <p class="slide-up show-on-scroll">
-        My <b>greatest technical achievements</b> were implementing automatic movement in the fish and getting the clownfish to feed the anemone. The clownfish would either grab the food and swim off to the side of the tank, or eat the food it was supposed to feed the anemone - how frustrating! Yet, when I got it to work, it was also the most satisfying accomplishment I felt during the whole project.
-      </p>
-
-      <img src="assets/images/works/hungry-fishies/3.png" alt="game screenshot">
-
-      <p class="slide-up show-on-scroll">
-        I created all the images in Photoshop. I incorporated <b>interactivity</b> in all stages of the game (e.g. in the rules and with the musical fish). I also introduced lively colors to the tank’s inhabitants and animated their images to make them feel more realistic.
-      </p>
-
-      <img src="assets/images/works/hungry-fishies/4.png" alt="game screenshot">
-
-      <p class="slide-up show-on-scroll">
-         The players who successfully satisfy the bellies of all the ravenous fish are rewarded with the product of my poetic skills and the fish’s pooping skills.
-      </p>
-
-      <img src="assets/images/works/hungry-fishies/5.png" alt="game screenshot">
-    </figure>
-  </section>
-
-
-  <!-- Table of contents ********************************************** -->
-
-  <section id="table-of-contents">
-    <h1>Works</h1>
-    <section class="all-groups">
-      <section class="group" id="group1">
-        <h2>Game/Interactive Design</h2>
-        <a href="hungry-fishies.html">
-          <p>Hungry Fishies</p>
-        </a>
-        <a href="root-fruit.html">
-          <p>Root Fruit</p>
-        </a>
-        <a href="stayhere.html">
-          <p>Stayhere</p>
-        </a>
-        <a href="snails-journey.html">
-          <p>A Snail's Journey</p>
-        </a>
-        <a href="hopping-dustballs.html">
-          <p>Hopping Dustballs</p>
-        </a>
-
-      </section>
-
-      <section class="group" id="group2">
-        <h2>Digital media</h2>
-        <a href="mischievous-monkey.html">
-          <p>Mischievous Monkey</p>
-        </a>
-        <a href="portfolio-website.html">
-          <p>Portfolio Website</p>
-        </a>
-        <a href="agic-posters.html">
-          <p>AGIC Social Media Posters</p>
-        </a>
-        <a href="rs-infographics.html">
-          <p>Reserve & Shop Infographics</p>
-        </a>
-      </section>
-
-      <section class="group" id="group3">
-        <h2>Visual communication</h2>
-        <a href="best-practices.html">
-          <p>Best Practices for Reopening During COVID-19</p>
-        </a>
-        <a href="world-of-type.html">
-          <p>The World of Type</p>
-        </a>
-        <a href="coccco-bag.html">
-          <p>The Coccco Bag</p>
-        </a>
-        <a href="milkweed-delights.html">
-          <p>Milkweed Delights</p>
-        </a>
-      </section>
-
-      <section class="group" id="group4">
-        <h2>Sculptural and 3D Environments</h2>
-        <a href="dragon-sculpture.html">
-          <p>Dragon Sculpture in a Fantasy Gallery</p>
-        </a>
-        <a href="butterfly-automata.html">
-          <p>Butterfly Automata</p>
-        </a>
-      </section>
-
-    </section>
-  </section>
-
-  <nav class="link_to_next_page">
-    <a href="root-fruit.html">
-      <div class="text_container">
-        <p>Root Fruit</p>
-      </div>
-    </a>
-  </nav>
-
-
-  <script>
-    /* Open when someone clicks on the span element */
-    function openNav() {
-      document.getElementById("table-of-contents").style.width = "100%";
-      document.getElementById("table-of-contents").style.padding = "100px";
-      document.getElementById("close-button").style.display = "flex";
-    }
-
-    /* Close when someone clicks on the "x" symbol inside the overlay */
-    function closeNav() {
-      document.getElementById("table-of-contents").style.width = "0%";
-      document.getElementById("table-of-contents").style.padding = "0px";
-      document.getElementById("close-button").style.display = "none";
-    }
-  </script>
-
-  <script src="js/show-on-scroll.js"></script>
-
-</body>
-
+    <script src="js/show-on-scroll.js"></script>
+  </body>
 </html>

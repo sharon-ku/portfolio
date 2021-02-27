@@ -76,12 +76,13 @@ section.content {
 
 .add-margin-below img {
   margin-bottom: 70px;
+  width: 100%;
 }
 
 .content .source {
   font-size: 1em;
   text-transform: uppercase;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
   margin: 0px;
 }
 

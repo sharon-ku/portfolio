@@ -21,6 +21,8 @@ body {
   width: 50%;
   right: 200px;
   top: 40px;
+
+  max-width: 620px;
 }
 
 .hero figure img {
