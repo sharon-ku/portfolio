@@ -34,7 +34,8 @@ let tableOfContents = `<h1>Works</h1>
   </section>
 </section>`;
 
-document.getElementById("table-of-contents").innerHTML = tableOfContents;
+// document.getElementById("table-of-contents").innerHTML = tableOfContents;
+$(`#table-of-contents`).html(tableOfContents);
 
 // Previous table of contents
 // let tableOfContents = `<h1>Works</h1>
