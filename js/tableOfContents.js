@@ -1,6 +1,7 @@
 /**************************************************
 Table of contents:
 Opens when user clicks on "Works" button
+Contains functions that handle openNav and closeNav
 Insert this HTML into the table-of-contents id on each page
 **************************************************/
 
@@ -39,26 +40,6 @@ let tableOfContentsHTML = `<h1>Works</h1>
     </a>
   </section>
 </section>`;
-
-let topNavigationHTML = `<section class="logo">
-  <a href="index.html">
-    <img src="assets/images/logo.png" alt="logo" />
-  </a>
-</section>
-
-<nav id="close-button">
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-</nav>
-
-<nav class="top-navigation">
-  <a href="javascript:void(0)" class="active" onclick="openNav()">
-    <p>Works ☰</p>
-  </a>
-</nav>`;
-
-// Inserting into top-navigation id
-$(`#top-navigation`).html(topNavigationHTML);
 
 // Inserting into table-of-contents id
 $(`#table-of-contents`).html(tableOfContentsHTML);

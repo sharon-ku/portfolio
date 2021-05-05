@@ -2,6 +2,7 @@
 
 // HTML that contains scripts to add
 let scriptsToAdd = `<script src="js/show-on-scroll.js"></script>
+<script src="js/topNavigation.js"></script>
 <script src="js/tableOfContents.js"></script>`;
 
 // Add HTML to all-scripts id
