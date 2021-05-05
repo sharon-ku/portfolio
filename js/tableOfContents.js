@@ -2,7 +2,7 @@
 let tableOfContents = `<h1>Works</h1>
 <section class="all-groups">
   <section class="group" id="group2">
-    <h2>Game/Interactive Design</h2>
+    <h2>Game & Interactive Design</h2>
     <a href="hungry-fishies.html">
       <p>Hungry Fishies</p>
     </a>
@@ -18,7 +18,7 @@ let tableOfContents = `<h1>Works</h1>
   </section>
 
   <section class="group" id="group3">
-    <h2>Visual communication</h2>
+    <h2>Graphic Design</h2>
     <a href="best-practices.html">
       <p>Best Practices for Reopening During COVID-19</p>
     </a>
