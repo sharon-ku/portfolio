@@ -114,8 +114,6 @@ const NUM_SEATS = 6;
 // angle used to position seat relative to wheel's center
 let seatInitialAngle = 0;
 
-
-
 // preload()
 //
 // Preloads assets (images, sounds, fonts)
@@ -154,7 +152,6 @@ function preload() {
   // image of ferris wheel seat
   ferrisWheelImage.seat = loadImage(`assets/images/ferrisWheelSeat.png`);
 }
-
 
 // setup()
 //
@@ -202,14 +199,20 @@ function setup() {
   fountain = new Fountain(fountainImages, whale);
 
   // Create a new ferris wheel
-  ferrisWheel = new FerrisWheel(ferrisWheelImage.wheels, ferrisWheelImage.stand);
+  ferrisWheel = new FerrisWheel(
+    ferrisWheelImage.wheels,
+    ferrisWheelImage.stand
+  );
 
   // Create 6 new ferris wheel seats and push to ferrisWheelSeats array
   for (let i = 0; i < NUM_SEATS; i++) {
     // The seat's initial angles are equally spaced across the perimeter of the ferris wheel:
-    seatInitialAngle = i * (TWO_PI / NUM_SEATS) + PI/2;
+    seatInitialAngle = i * (TWO_PI / NUM_SEATS) + PI / 2;
     // Create a new seat positioned at the initial angle
-    let ferrisWheelSeat = new FerrisWheelSeat(ferrisWheelImage.seat, seatInitialAngle);
+    let ferrisWheelSeat = new FerrisWheelSeat(
+      ferrisWheelImage.seat,
+      seatInitialAngle
+    );
     // Push to new seat to the ferrisWheelSeats array
     ferrisWheelSeats.push(ferrisWheelSeat);
   }
@@ -251,7 +254,6 @@ function draw() {
   //   let spark = sparks[i];
   //   // spark.display();
   // }
-
 }
 
 // Create table elements: table, butterflies, globe, ferris wheel, whale, plant
@@ -286,40 +288,42 @@ function createTableElements() {
 // If mouse hovers over plant, release butterflies at a certain ineterval
 // Butterflies flap wings
 function createButterflies() {
-    // If mouse hovering over plant, release butterflies
-    if (plant.overlapsWith(mouse)) {
-      releaseButterflies = true;
+  // If mouse hovering over plant, release butterflies
+  if (plant.overlapsWith(mouse)) {
+    releaseButterflies = true;
+  }
+
+  // If it's time to release butterflies, create butterflies at an interval of time
+  if (releaseButterflies) {
+    // Increase frames elapsed
+    butterflyFrames.elapsed++;
+    // Once frames elapsed is equal to frames needed to switch between the images, update current wheels image
+    if (
+      butterflyFrames.elapsed === butterflyFrames.neededToReleaseNewButterfly
+    ) {
+      // Create new butterfly
+      let butterfly = new Butterfly(butterflyImages, plant);
+      butterflies.push(butterfly);
+      // Reset frames elapsed to zero
+      butterflyFrames.elapsed = 0;
     }
 
-    // If it's time to release butterflies, create butterflies at an interval of time
-    if (releaseButterflies) {
-      // Increase frames elapsed
-      butterflyFrames.elapsed++;
-      // Once frames elapsed is equal to frames needed to switch between the images, update current wheels image
-      if (butterflyFrames.elapsed === butterflyFrames.neededToReleaseNewButterfly) {
-        // Create new butterfly
-        let butterfly = new Butterfly(butterflyImages, plant);
-        butterflies.push(butterfly);
-        // Reset frames elapsed to zero
-        butterflyFrames.elapsed = 0;
-      }
+    // Set releaseButterflies to false to prevent more butterflies from being released
+    releaseButterflies = false;
+  }
 
-      // Set releaseButterflies to false to prevent more butterflies from being released
-      releaseButterflies = false;
+  // Display butterflies and let them fly
+  // Also remove butterfly from array if it goes off canvas
+  for (let i = 0; i < butterflies.length; i++) {
+    let butterfly = butterflies[i];
+    // let butterfly fly and display it
+    butterfly.update();
+
+    // If butterfly goes off canvas, remove it from butterflies array
+    if (butterfly.y < 0) {
+      butterflies.splice(i, 1);
     }
-
-    // Display butterflies and let them fly
-    // Also remove butterfly from array if it goes off canvas
-    for (let i = 0; i < butterflies.length; i++) {
-      let butterfly = butterflies[i];
-      // let butterfly fly and display it
-      butterfly.update();
-
-      // If butterfly goes off canvas, remove it from butterflies array
-      if (butterfly.y < 0) {
-        butterflies.splice(i, 1);
-      }
-    }
+  }
 }
 
 // Display globe with unicorn and falling snow inside it
