@@ -24,11 +24,11 @@ let canvasY;
 let paragraph;
 
 // background color: navy blue
+// hex code: #3f738c
 let bg = {
   r: 63,
   g: 115,
   b: 140,
-  // hex code: #3f738c
 };
 
 // table that holds objects
@@ -155,16 +155,16 @@ function preload() {
 
 // setup()
 //
-// Description of setup() goes here.
+// Create canvas, remove all strokes, create all objects
 function setup() {
+  // Create a canvas that takes up full screen
+  canvas = createCanvas(windowWidth, windowHeight);
+
   // Remove strokes on all shapes
   noStroke();
 
   // Hide cursor
   // noCursor();
-
-  // Create a canvas that takes up full screen
-  canvas = createCanvas(windowWidth, windowHeight);
 
   // Center canvas on window
   centerCanvas();
