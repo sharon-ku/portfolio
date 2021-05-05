@@ -1,5 +1,11 @@
-// Table of contents
-let tableOfContents = `<h1>Works</h1>
+/**************************************************
+Table of contents:
+Opens when user clicks on "Works" button
+Insert this HTML into the table-of-contents id on each page
+**************************************************/
+
+// HTML to insert into table-of-contents id
+let tableOfContentsHTML = `<h1>Works</h1>
 <section class="all-groups">
   <section class="group" id="group2">
     <h2>Game & Interactive Design</h2>
@@ -34,8 +40,52 @@ let tableOfContents = `<h1>Works</h1>
   </section>
 </section>`;
 
-// document.getElementById("table-of-contents").innerHTML = tableOfContents;
-$(`#table-of-contents`).html(tableOfContents);
+let topNavigationHTML = `<section class="logo">
+  <a href="index.html">
+    <img src="assets/images/logo.png" alt="logo" />
+  </a>
+</section>
+
+<nav id="close-button">
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+</nav>
+
+<nav class="top-navigation">
+  <a href="javascript:void(0)" class="active" onclick="openNav()">
+    <p>Works ☰</p>
+  </a>
+</nav>`;
+
+// Inserting into top-navigation id
+$(`#top-navigation`).html(topNavigationHTML);
+
+// Inserting into table-of-contents id
+$(`#table-of-contents`).html(tableOfContentsHTML);
+
+// Open navigation when someone clicks on the span element
+function openNav() {
+  $(`#table-of-contents`).css({
+    width: `100%`,
+    padding: `100px`,
+  });
+
+  $(`#close-button`).css({
+    display: `flex`,
+  });
+}
+
+// Close navigation when someone clicks on the "x" symbol inside the overlay
+function closeNav() {
+  $(`#table-of-contents`).css({
+    width: `0%`,
+    padding: `0%`,
+  });
+
+  $(`#close-button`).css({
+    display: `none`,
+  });
+}
 
 // Previous table of contents
 // let tableOfContents = `<h1>Works</h1>

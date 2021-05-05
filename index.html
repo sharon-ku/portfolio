@@ -19,22 +19,8 @@
     <script src="js/libraries/jquery-3.6.0.min.js"></script>
   </head>
   <body>
-    <section class="logo">
-      <a href="index.html">
-        <img src="assets/images/logo.png" alt="logo" />
-      </a>
-    </section>
-
-    <nav id="close-button">
-      <!-- Button to close the overlay navigation -->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-    </nav>
-
-    <nav class="top-navigation">
-      <a href="javascript:void(0)" class="active" onclick="openNav()">
-        <p>Works ☰</p>
-      </a>
-    </nav>
+    <!-- Top navigation -->
+    <section id="top-navigation"></section>
 
     <section class="article">
       <section class="my-name">
@@ -55,28 +41,11 @@
       </section>
     </section>
 
-    <!-- Table of contents ********************************************** -->
-
+    <!-- Table of contents -->
     <section id="table-of-contents"></section>
 
-    <!-- My scripts -->
-    <script>
-      /* Open when someone clicks on the span element */
-      function openNav() {
-        document.getElementById("table-of-contents").style.width = "100%";
-        document.getElementById("table-of-contents").style.padding = "100px";
-        document.getElementById("close-button").style.display = "flex";
-      }
-
-      /* Close when someone clicks on the "x" symbol inside the overlay */
-      function closeNav() {
-        document.getElementById("table-of-contents").style.width = "0%";
-        document.getElementById("table-of-contents").style.padding = "0px";
-        document.getElementById("close-button").style.display = "none";
-      }
-    </script>
-
-    <script src="js/tableOfContents.js"></script>
+    <!-- All scripts to include -->
+    <script id="all-scripts" src="js/allScripts.js"></script>
 
     <!-- ********************************************** -->
 
