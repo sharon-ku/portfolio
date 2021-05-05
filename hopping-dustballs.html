@@ -20,25 +20,10 @@
   </head>
 
   <body>
-    <!-- Top navigation ********************************************** -->
-    <section class="logo">
-      <a href="index.html">
-        <img src="assets/images/logo.png" alt="logo" />
-      </a>
-    </section>
+    <!-- Top navigation -->
+    <section id="top-navigation"></section>
 
-    <nav id="close-button">
-      <!-- Button to close the overlay navigation -->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-    </nav>
-
-    <nav class="top-navigation">
-      <a href="javascript:void(0)" class="active" onclick="openNav()">
-        <p>Works ☰</p>
-      </a>
-    </nav>
-    <!-- ********************************************** -->
-
+    <!-- Main content -->
     <section class="hero">
       <hgroup class="slide-up show-on-scroll">
         <h1>Hopping Dustballs</h1>
@@ -106,10 +91,11 @@
       </figure>
     </section>
 
-    <!-- Table of contents ********************************************** -->
-
+    <!-- Footer ********************************************** -->
+    <!-- Table of contents -->
     <section id="table-of-contents"></section>
 
+    <!-- Link to next page -->
     <nav class="link_to_next_page">
       <a href="best-practices.html">
         <div class="text_container">
@@ -118,25 +104,7 @@
       </a>
     </nav>
 
-    <!-- My scripts -->
-    <script>
-      /* Open when someone clicks on the span element */
-      function openNav() {
-        document.getElementById("table-of-contents").style.width = "100%";
-        document.getElementById("table-of-contents").style.padding = "100px";
-        document.getElementById("close-button").style.display = "flex";
-      }
-
-      /* Close when someone clicks on the "x" symbol inside the overlay */
-      function closeNav() {
-        document.getElementById("table-of-contents").style.width = "0%";
-        document.getElementById("table-of-contents").style.padding = "0px";
-        document.getElementById("close-button").style.display = "none";
-      }
-    </script>
-
-    <script src="js/show-on-scroll.js"></script>
-
-    <script src="js/tableOfContents.js"></script>
+    <!-- All scripts to include -->
+    <script id="all-scripts" src="js/allScripts.js"></script>
   </body>
 </html>

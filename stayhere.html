@@ -1,135 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sharon Ku</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sharon Ku</title>
 
-  <!-- Add favicon -->
-  <link rel="icon" href="assets/images/logo.png" sizes="16x16">
+    <!-- Add favicon -->
+    <link rel="icon" href="assets/images/logo.png" sizes="16x16" />
 
-  <!-- CSS sheets -->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/work.css">
-  <link rel="stylesheet" href="css/works/stayhere.css">
+    <!-- CSS sheets -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/work.css" />
+    <link rel="stylesheet" href="css/works/stayhere.css" />
 
-  <!-- JavaScript libraries -->
-  <script src="js/libraries/jquery-3.6.0.min.js"></script>
-</head>
+    <!-- JavaScript libraries -->
+    <script src="js/libraries/jquery-3.6.0.min.js"></script>
+  </head>
 
-<body>
-  <!-- Top navigation ********************************************** -->
-  <section class="logo">
-    <a href="index.html">
-      <img src="assets/images/logo.png" alt="logo">
-    </a>
-  </section>
+  <body>
+    <!-- Top navigation -->
+    <section id="top-navigation"></section>
 
-  <nav id="close-button">
-    <!-- Button to close the overlay navigation -->
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-  </nav>
+    <!-- Main content -->
+    <section class="hero">
+      <hgroup class="slide-up show-on-scroll">
+        <h1>Stayhere</h1>
+        <!-- <p>Insert Description here</p> -->
+      </hgroup>
+      <figure class="slide-up show-on-scroll">
+        <img
+          src="assets/images/works/stayhere/hero.png"
+          alt="stayhere screenshot"
+        />
+      </figure>
+    </section>
 
-  <nav class="top-navigation">
-    <a href="javascript:void(0)" class="active" onclick="openNav()">
-      <p>Works ☰</p>
-    </a>
-  </nav>
-  <!-- ********************************************** -->
+    <section class="content">
+      <nav>
+        <a
+          href="https://sharon-ku.github.io/dart349/assignment3-final/"
+          target="_blank"
+        >
+          Visit Stayhere!
+        </a>
+      </nav>
+      <nav>
+        <a
+          href="https://github.com/sharon-ku/dart349/tree/master/assignment3-final"
+          target="_blank"
+          >Link to Code</a
+        >
+      </nav>
 
+      <p class="slide-up show-on-scroll">
+        Using HTML, CSS, and JavaScript, I designed this satirical website based
+        on Netflix and Facebook to expose the
+        <b>addictive nature of social media and video platforms</b>. By
+        interacting with the website's elements (e.g. hovering over certain
+        images or clicking on buttons), the user will realize the
+        <b>negative health effects</b> associated with excessive technology
+        consumption.
+      </p>
+      <figure class="slide-up show-on-scroll">
+        <img
+          src="assets/images/works/stayhere/1.png"
+          alt="stayhere screenshot"
+        />
 
-  <section class="hero">
-    <hgroup class="slide-up show-on-scroll">
-      <h1>Stayhere</h1>
-      <!-- <p>Insert Description here</p> -->
-    </hgroup>
-    <figure class="slide-up show-on-scroll">
-      <img src="assets/images/works/stayhere/hero.png" alt="stayhere screenshot">
-  </section>
+        <p class="slide-up show-on-scroll">
+          While the user navigates on Stayhere, a Facelock notification will
+          sporadically pop up on the screen, simulating
+          <b>real-life notifications and intermittent schedules</b>. If the user
+          clicks on the notification, it will take them to the Facelock page.
+        </p>
 
-  <section class="content">
-    <nav>
-      <a href="https://sharon-ku.github.io/dart349/assignment3-final/" target="_blank">
-        Visit Stayhere!
+        <section class="phone-mockup">
+          <img
+            src="assets/images/works/stayhere/popup.png"
+            alt="stayhere screenshot"
+          />
+        </section>
+
+        <p class="slide-up show-on-scroll">
+          On Facelock, the user scrolls down the page to view a variety of
+          posts, ranging from ads to memes to events. Each of them carries an
+          underlying message that exposes a downside of social media and video
+          platforms. Certain features <b>trigger the brain’s dopamine</b>,
+          giving the impression that social media is worth perusing. For
+          instance, the “Like” button appeals to users’ need for social
+          validation.
+        </p>
+
+        <section class="add-margin-below">
+          <img
+            src="assets/images/works/stayhere/2.png"
+            alt="stayhere screenshot"
+          />
+        </section>
+
+        <img
+          src="assets/images/works/stayhere/3.png"
+          alt="stayhere screenshot"
+        />
+
+        <p class="slide-up show-on-scroll">
+          When the user has been "logged on" to Facelock for five minutes, a
+          warning message will pop up to let the user know that five minutes of
+          their life have gone by.
+        </p>
+
+        <section class="add-margin-below">
+          <img
+            src="assets/images/works/stayhere/4.png"
+            alt="stayhere screenshot"
+          />
+          <img
+            src="assets/images/works/stayhere/5.png"
+            alt="stayhere screenshot"
+          />
+        </section>
+      </figure>
+    </section>
+
+    <!-- Footer ********************************************** -->
+    <!-- Table of contents -->
+    <section id="table-of-contents"></section>
+
+    <!-- Link to next page -->
+    <nav class="link_to_next_page">
+      <a href="snails-journey.html">
+        <div class="text_container">
+          <p>A Snail's Journey</p>
+        </div>
       </a>
     </nav>
-    <nav>
-      <a href="https://github.com/sharon-ku/dart349/tree/master/assignment3-final" target="_blank">Link to Code</a>
-    </nav>
 
-    <p class="slide-up show-on-scroll">
-      Using HTML, CSS, and JavaScript, I designed this satirical website based on Netflix and Facebook to expose the <b>addictive nature of social media and video platforms</b>.
-      By interacting with the website's elements (e.g. hovering over certain images or clicking on buttons), the user will realize the <b>negative health effects</b> associated with excessive technology consumption.
-    </p>
-    <figure class="slide-up show-on-scroll">
-      <img src="assets/images/works/stayhere/1.png" alt="stayhere screenshot">
-
-      <p class="slide-up show-on-scroll">
-        While the user navigates on Stayhere, a Facelock notification will sporadically pop up on the screen, simulating <b>real-life notifications and intermittent schedules</b>. If the user clicks on the notification, it will take them to the Facelock page.
-      </p>
-
-      <section class="phone-mockup">
-        <img src="assets/images/works/stayhere/popup.png" alt="stayhere screenshot">
-      </section>
-
-      <p class="slide-up show-on-scroll">
-        On Facelock, the user scrolls down the page to view a variety of posts, ranging from ads to memes to events. Each of them carries an underlying message that exposes a downside of social media and video platforms. Certain features <b>trigger the brain’s dopamine</b>, giving the impression that social media is worth perusing. For instance, the “Like” button appeals to users’ need for social validation.
-      </p>
-
-      <section class="add-margin-below">
-        <img src="assets/images/works/stayhere/2.png" alt="stayhere screenshot">
-      </section>
-
-      <img src="assets/images/works/stayhere/3.png" alt="stayhere screenshot">
-
-      <p class="slide-up show-on-scroll">
-        When the user has been "logged on" to Facelock for five minutes, a warning message will pop up to let the user know that five minutes of their life have gone by.
-      </p>
-
-      <section class="add-margin-below">
-        <img src="assets/images/works/stayhere/4.png" alt="stayhere screenshot">
-        <img src="assets/images/works/stayhere/5.png" alt="stayhere screenshot">
-      </section>
-
-    </figure>
-  </section>
-
-
-  <!-- Table of contents ********************************************** -->
-
-  <section id="table-of-contents">
-  </section>
-
-  <nav class="link_to_next_page">
-    <a href="snails-journey.html">
-      <div class="text_container">
-        <p>A Snail's Journey</p>
-      </div>
-    </a>
-  </nav>
-
-<!-- My scripts -->
-<script>
-  /* Open when someone clicks on the span element */
-  function openNav() {
-    document.getElementById("table-of-contents").style.width = "100%";
-    document.getElementById("table-of-contents").style.padding = "100px";
-    document.getElementById("close-button").style.display = "flex";
-  }
-
-  /* Close when someone clicks on the "x" symbol inside the overlay */
-  function closeNav() {
-    document.getElementById("table-of-contents").style.width = "0%";
-    document.getElementById("table-of-contents").style.padding = "0px";
-    document.getElementById("close-button").style.display = "none";
-  }
-</script>
-
-<script src="js/show-on-scroll.js"></script>
-
-<script src="js/tableOfContents.js"></script>
-
-</body>
+    <!-- All scripts to include -->
+    <script id="all-scripts" src="js/allScripts.js"></script>
+  </body>
 </html>
