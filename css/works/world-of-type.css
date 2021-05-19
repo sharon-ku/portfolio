@@ -53,3 +53,26 @@ body {
     width: 200px;
   }
 }
+
+/* === MOBILE LAYOUT INHERITS FROM DESKTOP 0PX 600PX === */
+@media only screen and (max-width: 600px) {
+  .hero hgroup {
+    width: 70%;
+    margin-left: 0px;
+    top: 190px;
+  }
+
+  .hero .chicks-image figure {
+    left: 200px;
+    top: 300px;
+    width: 200px;
+  }
+
+  .hero figure {
+    width: 50%;
+    max-width: 600px;
+    min-width: 250px;
+    right: 30px;
+    top: 60px;
+  }
+}

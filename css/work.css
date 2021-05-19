@@ -256,4 +256,8 @@ nav.link_to_next_page {
     font-weight: bold;
     transition: all 0.3s;
   }
+
+  .text_container {
+    margin: 0 40px;
+  }
 }
