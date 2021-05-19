@@ -8,7 +8,7 @@ Insert this HTML into the top-navigation id on each page
 **************************************************/
 
 // HTML to insert into top-navigation id
-let topNavigationHTML = `<section class="logo">
+let topNavigationHTML = `<section id="logo">
   <a href="index.html">
     <img src="assets/images/logo.png" alt="logo" />
   </a>

@@ -17,16 +17,17 @@ body {
   /* position: relative; */
 }
 
-section.logo {
+section#logo {
   position: fixed;
   top: 28px;
   left: 80px;
   z-index: 101;
-  width: 30px;
+  width: 60px;
 }
 
-.logo a img {
+#logo a img {
   filter: drop-shadow(0px 0px 2px #c0c0c0);
+  width: 100%;
 }
 
 nav#close-button {
@@ -198,7 +199,7 @@ section.hover-instructions {
   overflow: scroll;
 }
 
-.show-table-of-contents {
+/* .show-table-of-contents {
   width: 100%;
   padding: 100px;
 }
@@ -206,7 +207,7 @@ section.hover-instructions {
 .hide-table-of-contents {
   width: 0%;
   padding: 0px;
-}
+} */
 
 #table-of-contents h1 {
   /* light blue */
@@ -314,6 +315,12 @@ section.hover-instructions {
 
 /* === MOBILE LAYOUT INHERITS FROM DESKTOP 0PX 600PX === */
 @media only screen and (max-width: 600px) {
+  section#logo {
+    top: 20px;
+    left: 30px;
+    width: 50px;
+  }
+
   section.my-name {
     width: 100%;
   }
