@@ -191,7 +191,7 @@ section.hover-instructions {
   height: 100vh;
   width: 0%;
   position: fixed;
-  top: -20px;
+  top: 0px;
   left: 0px;
   padding: 0px;
   z-index: 101;
@@ -393,6 +393,10 @@ section.hover-instructions {
   #table-of-contents h1 {
     font-size: 2em;
     margin-bottom: 30px;
+  }
+
+  #table-of-contents .group h2 {
+    letter-spacing: 0.3px;
   }
 
   #table-of-contents .all-groups .group {
