@@ -46,3 +46,26 @@ body {
     font-size: 1.8em;
   }
 }
+
+/* === MOBILE LAYOUT INHERITS FROM DESKTOP 0PX 600PX === */
+@media only screen and (max-width: 600px) {
+  .hero hgroup {
+    width: 70%;
+    margin-left: 0px;
+    top: 200px;
+  }
+
+  .hero hgroup h1 {
+    font-size: 1.7em;
+    padding: 40px;
+  }
+
+  .hero figure {
+    width: 70%;
+    right: 20px;
+    top: 60px;
+
+    max-width: 1000px;
+    min-width: 300px;
+  }
+}
