@@ -225,4 +225,35 @@ nav.link_to_next_page {
   .content nav a:link {
     width: 270px;
   }
+
+  .add-margin-below img {
+    margin-bottom: 10px;
+  }
+
+  nav.link_to_next_page {
+    background: #212226; /* raisin black */
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+    height: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .link_to_next_page a:link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
 }
