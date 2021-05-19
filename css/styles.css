@@ -315,6 +315,11 @@ section.hover-instructions {
 
 /* === MOBILE LAYOUT INHERITS FROM DESKTOP 0PX 600PX === */
 @media only screen and (max-width: 600px) {
+  /* canvas {
+    width: 100% !important;
+    height: 100% !important;
+  } */
+
   section#logo {
     top: 20px;
     left: 30px;
@@ -385,6 +390,7 @@ section.hover-instructions {
   }
 
   .hover-instructions p {
+    display: none;
     font-size: 0.9em;
     letter-spacing: 0.5px;
     max-width: 250px;
