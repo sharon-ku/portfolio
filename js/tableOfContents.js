@@ -51,6 +51,9 @@ function openNav() {
     padding: `100px`,
   });
 
+  // $(`#table-of-contents`).removeClass("hide-table-of-contents");
+  // $(`#table-of-contents`).addClass("show-table-of-contents");
+
   $(`#close-button`).css({
     display: `flex`,
   });
@@ -62,6 +65,9 @@ function closeNav() {
     width: `0%`,
     padding: `0%`,
   });
+
+  // $(`#table-of-contents`).removeClass("show-table-of-contents");
+  // $(`#table-of-contents`).addClass("hide-table-of-contents");
 
   $(`#close-button`).css({
     display: `none`,
